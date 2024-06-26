@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/shipping_bag.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: { inter: ["Poppins", "sans-serif"] },
+              colors: {
+                c: "",
+              },
+            },
+          },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>basket page</title>
+    <style>
+       
+    </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1179.0" data-gr-ext-installed="" class="style-0">
+    <div class="style-1">
+        <div class="style-2" role="region"></div>
+        <div aria-hidden="false" class="style-3">
+            <header class="style-4">
+                <div class="style-5"><a class="style-6" href="#navigation">Jump to nav</a><a class="style-7" href="#main">Jump to content</a></div>
+                <div class="style-8">
+                    <div class="style-9">
+                        <div class="style-10">
+                            <div class="style-11">
+                                <div class="style-12"></div>
+                            </div>
+                            <div class="style-13" data-testid="announcement-slides-desktop">
+                                <div class="style-14" data-testid="announcement-slides-view-desktop">
+                                    <div class="style-15" dir="ltr">
+                                        <button class="style-16">
+                                            <svg class="style-17">
+                                                <use href="/themes/icons/sprites.svg?cb=1717687835923#angle_left" class="style-18"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="style-19">
+                                            <div class="style-20">
+                                                <div data-index="0" class="style-21" tabindex="-1" aria-hidden="true">
+                                                    <div class="style-22">
+                                                        <div class="style-23" tabindex="-1">
+                                                            <div class="style-24">
+                                                                <div class="style-25">
+                                                                    <div class="style-26">
+                                                                        <div class="style-27">Up to 3 FREE GIFTS with spend!</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-index="1" class="style-28" tabindex="-1" aria-hidden="true">
+                                                    <div class="style-29">
+                                                        <div class="style-30" tabindex="-1">
+                                                            <div class="style-31">
+                                                                <div class="style-32">
+                                                                    <div class="style-33">
+                                                                        <div class="style-34">The Makeup Artist’s Bundle ONLY $49 (Value: $200+) - <a class="style-35" href="/en-us/makeup-artist-bundle">SHOP NOW</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-index="2" class="style-36" tabindex="-1" aria-hidden="false">
+                                                    <div class="style-37">
+                                                        <div class="style-38" tabindex="-1">
+                                                            <div class="style-39">
+                                                                <div class="style-40">
+                                                                    <div class="style-41">
+                                                                        <div class="style-42">Get sun ready! Check out the <a class="style-43" href="/en-us/suncare">SUNCARE SHOP</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-index="3" class="style-44" tabindex="-1" aria-hidden="true">
+                                                    <div class="style-45">
+                                                        <div class="style-46" tabindex="-1">
+                                                            <div class="style-47">
+                                                                <div class="style-48">
+                                                                    <div class="style-49">
+                                                                        <div class="style-50">Free shipping on all orders $50+</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-index="4" class="style-51" tabindex="-1" aria-hidden="true">
+                                                    <div class="style-52">
+                                                        <div class="style-53" tabindex="-1">
+                                                            <div class="style-54">
+                                                                <div class="style-55">
+                                                                    <div class="style-56">
+                                                                        <div class="style-57">Shop via text with <a class="style-58" target="_blank" href="https://go.textual.com/register/the-cosmetics-company-store?list=consumer&amp;hfalias=cust-a&amp;utm_source=ELC&amp;utm_medium=ecommerce">Text to Buy</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="style-59">
+                                            <svg class="style-60">
+                                                <use href="/themes/icons/sprites.svg?cb=1717687835923#angle_right" class="style-61"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-62">
+                                <div class="style-63"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="style-65">
+                        <div class="style-66">
+                            <div class="style-74" data-testid="logo">
+                                <a class="style-75" aria-label="Go back to the homepage" name="Go back to the homepage" href="/en-us/">
+                                    <div class="style-76">
+                                        <div class="style-77">
+                                            <img src="https://i.postimg.cc/T3P7GjbD/380546670-685491066943571-728663435577067349-n-removebg-preview.png" class="style-78">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            
+                            
+                            <div class="search-container">
+                                <input type="text" placeholder="Search for products...">
+                                <button type="submit">Search</button>
+                            </div>
+
+                            <div class="style-67">
+                                <div class="style-68">
+                                    <a class="style-72" aria-label="MY ACCOUNT" name="MY ACCOUNT" href="/en-us/account/sign-in">
+                                        <div class="style-73">MY ACCOUNT</div>
+                                    </a>
+                                    <a class="style-69" aria-label="My Account" data-testid="account-sign-in-link" name="My Account" href="/en-us/account/sign-in">
+                                        <img src="https://i.postimg.cc/7ZRSJdsq/shopping-bag-copy.png" class="style-70">
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="style-102">
+                        <div class="style-103">
+                            <div class="style-104" data-testid="megamenu-navigation">
+                                <a class="style-105" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/suncare">Suncare Shop</a>
+                                <div class="style-106" data-testid="megamenu-navigation-section">
+                                    <a class="style-107" aria-haspopup="true" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/skincare">Skincare</a>
+                                    <div class="style-108" data-testid="megamenu-navigation-dropdown-menu" data-menu-open="false">
+                                        <div class="style-109">
+                                            <div class="style-110">
+                                                <div class="style-111" data-testid="megamenu-navigation-dropdown">
+                                                    <div class="style-112" data-testid="megamenu-navigation-dropdown-column">
+                                                        <div class="style-113"><a class="style-114" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/skincare/cleaner-and-exfoliator">Cleanser &amp; Exfoliator</a><a class="style-115" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/skincare/toner-clarifiers">Toner &amp; Clarifiers</a><a class="style-116" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/skincare/moisturizer">Moisturizer</a><a class="style-117" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/skincare/serum-essence">Serum &amp; Essence</a><a class="style-118" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/skincare/face-masks-treatment">Face Mask &amp; Treatment</a><a class="style-119" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/skincare/skincare-sets">Skincare Set</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-120"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-121" data-testid="megamenu-navigation-section"><a class="style-122" aria-haspopup="true" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/makeup">Makeup</a>
+                                    <div class="style-123" data-testid="megamenu-navigation-dropdown-menu" data-menu-open="false">
+                                        <div class="style-124">
+                                            <div class="style-125">
+                                                <div class="style-126" data-testid="megamenu-navigation-dropdown">
+                                                    <div class="style-127" data-testid="megamenu-navigation-dropdown-column">
+                                                        <div class="style-128">
+                                                            <a class="style-129" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/makeup/face">Face</a>
+                                                            <a class="style-130" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/makeup/eyes">Eye</a>
+                                                            <a class="style-131" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/makeup/lips">Lip</a>
+                                                            <a class="style-132" data-testid="megamenu-navigation-dropdown-link" tabindex="0" href="/en-us/makeup/accessories">Accessories</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-133"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="style-134" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/haircare">Haircare</a>
+                                <a class="style-135" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/fragrance">Fragrance</a>
+                                <a class="style-136" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/mens">Mens</a>
+                                <a class="style-137" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/gift-sets">Gift Sets</a><a class="style-138" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="/en-us/brands">Brands</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="style-139">
+                <div class="style-140" data-testid="checkout">
+                    <nav aria-label="Checkout" class="style-141">
+                        <h1 class="style-142">
+                            <a class="style-143" aria-label="Shopping bag" name="Shopping bag" href="/en-us/checkout/basket">Shopping bag</a>
+                        </h1>
+                    </nav>
+                    <div class="style-144">
+                        <div class="style-145">
+                            <div class="style-146">
+                                <h2 class="style-147">Shipping Method</h2>
+                                <h2 class="style-148">Shipping Method</h2>
+                                <div class="style-149">
+                                    <div class="style-150">
+                                        <div class="style-151">
+                                            <div class="style-152">
+                                                <label for="CS_US-STANDARD" class="style-153">
+                                                    <div class="style-154">Standard $5.00 (3-10 business days)</div>
+                                                </label>
+                                                <input data-testid="shipping-option-0" name="shippingOption" title="Standard $5.00 (3-10 business days)" type="radio" value="Standard" checked="" class="style-155" />
+                                                <div class="style-156"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-157">
+                                    <span class="style-158">
+                                        <div class="style-159">
+                                            <div class="style-160">
+                                                <img src="https://i.postimg.cc/X7jWYgrN/image-15-removebg-preview.png" class="style-161">
+                                            </div>
+                                        </div>
+                                        <div class="style-162">Free shipping on all orders $50+</div>
+                                    </span>
+                                </div>
+                            </div>
+                            <table aria-describedby="basket" class="style-163">
+                                <thead scope="rowgroup" class="style-164">
+                                    <tr class="style-165">
+                                        <th class="style-166" scope="col">Item Summary</th>
+                                        <th class="style-167" scope="col">Price</th>
+                                        <th class="style-168" scope="col">Quantity</th>
+                                        <th scope="col" class="style-169">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody role="rowgroup" class="style-170">
+                                    {% for bag_product in bag_products %}
+                                    <tr class="style-171" data-testid="basket-item" role="row">
+                                        <td class="style-172">
+                                            <div class="style-173"><a class="style-174" aria-label="SURF SPRAY" data-testid="minicart-item-details-image-link-0-image-link" name="SURF SPRAY" title="SURF SPRAY" href="{{ bag_product.image_url }}">
+                                                    <div class="style-175">
+                                                        <div class="style-176">
+                                                            <div class="style-177"><img alt="SURF SPRAY" height="750" src="https://i.localised.com/img/cs/product/71b87a8e-6dd3-4b29-828e-ad9ace6a4fc4_THUMB.jpg" width="600" class="style-178" /></div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="style-179">
+                                                <div class="style-180">
+                                                    
+                                                    <div class="style-181">
+                                                        
+                                                        <a class="style-182" aria-label="SURF SPRAY" name="SURF SPRAY" href="/en-us/product/surf-spray/B1N201?sku=cs_B1N201">{{ bag_product.product.name_product }}</a>
+                                                    </div>
+                                                </div>
+                                                <div class="style-183">
+                                                
+                                                <button aria-label="Remove SURF SPRAY from shopping bag" class="style-201" data-testid="remove-from-cart-0" name="Remove SURF SPRAY from shopping bag">Remove</button>
+                                            </div>
+                                            
+                                        </td>
+                                        <td class="style-202">
+                                            <div class="style-203">${{ bag_product.price }}</div>
+                                        </td>
+                                        <td class="style-205">
+                                            <div class="style-206">
+                                                <div>
+                                                    <button data-testid="decrement-btn" class="quantity-btn">-</button>
+                                                    <input type="number" data-testid="quantity-input" value="{{ bag_product.quantity }}" min="1">
+                                                    <button data-testid="increment-btn" class="quantity-btn">+</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="style-215">
+                                            <div class="style-216">$9.60</div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                                
+                            </table>
+                            
+                            <span class="style-263">Availability and pricing for items in bag are not guaranteed until checkout is complete. All sales final.</span>
+                            <span class="style-264">We aim to deliver your order promptly by processing it right away. This means that once your order is placed, we cannot make any changes, including cancellations, address updates, shipping method adjustments, or item modifications.</span>
+                        </div>
+                        <div class="style-265">
+                            <div class="style-266">
+                                <div class="style-267">
+                                    <div class="style-268">
+                                        <h2 class="style-269">Order Summary</h2>
+                                        <h2 class="style-270">Order Summary</h2>
+                                        <div class="style-271">
+                                            <div class="style-272">
+                                                <div class="style-273">
+                                                    <div class="style-274">Subtotal<span class="style-275">$29.40</span></div>
+                                                    <div class="style-276">Shipping<span class="style-277">$5.00</span></div>
+                                                    <div class="style-278">Estimated Tax<div class="style-279">TBD</div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-280">Total<span class="style-281">$34.40</span></div>
+                                            </div>
+                                            <div class="style-282">
+                                                <div class="style-283">
+                                                    <afterpay-placement data-amount="34.4" data-currency="USD" data-locale="en_US" data-modal-theme="white" data-size="xs" class="style-284"></afterpay-placement>
+                                                </div>
+                                            </div>
+                                            <div class="style-285"></div>
+                                            <div class="style-286">
+                                                <div class="style-287">
+                                                    <div class="style-288">You're <strong class="style-289">$20.60</strong> away from free shipping!</div>
+                                                    <div class="style-290">
+                                                        <div class="style-291"></div>
+                                                        <div class="style-292"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="style-293" data-testid="gift-tier-progress-0">
+                                                <div class="style-294">You're <strong class="style-295">$45.60</strong> away from a free gift!</div>
+                                                <div class="style-296">
+                                                    <div class="style-297">
+                                                        <div class="style-298">
+                                                            <div class="style-299"></div>
+                                                            <div class="style-300"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="style-301" data-testid="gift-tier-progress-1">
+                                                <div class="style-302">You're <strong class="style-303">$45.60</strong> away from a free gift!</div>
+                                                <div class="style-304">
+                                                    <div class="style-305">
+                                                        <div class="style-306">
+                                                            <div class="style-307"></div>
+                                                            <div class="style-308"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="style-309">
+                                        <div class="style-310">
+                                            <label class="style-311">
+                                                <input type="checkbox" class="style-312" />
+                                                <span class="style-313"></span><span class="style-314">
+                                                    <div class="style-315">Do you have a promo code?</div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="style-316">
+                                            <div class="style-317">
+                                                <input class="style-318" data-testid="voucher-input" placeholder="Enter promo code" type="text" value="" />
+                                                <button aria-label="Apply promo code" class="style-319" data-testid="voucher-apply-button" name="Apply promo code" type="button">
+                                                    <div class="style-320">
+                                                        <img src="https://i.postimg.cc/QtqkP1mS/pngegg-5.png" class="style-321">
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="style-322">
+                                        <div class="style-323">
+                                            <div class="style-324">
+                                                <a class="style-325" aria-label="Continue to Checkout" data-testid="checkout-cta" name="Continue to Checkout" href="/en-us/checkout/shipping">
+                                                    <span class="style-326" type="submit"><span class="style-327">
+                                                        <div class="style-328">
+                                                            <img src="https://i.postimg.cc/dtk8Ybtz/Credit-Card.png" class="style-329">
+                                                        </div>
+                                                    </span>Continue to Checkout</span>
+                                                </a>
+                                            </div>
+                                            <div class="style-330">
+                                                <div class="style-331">
+                                                    <div class="style-332">
+                                                        <div class="style-333">Or Express</div>
+                                                    </div>
+                                                    <div class="style-334">
+                                                        <img src="https://i.postimg.cc/TwBnL0tk/Caret-Symbol-PNG-Image.png" class="style-335">
+                                                    </div>
+                                                </div>
+                                                <div class="style-336">
+                                                    <button aria-label="Pay with PayPal" class="style-337" data-testid="paypal_ecs-button" name="Pay with PayPal" title="Pay with PayPal">
+                                                        <div class="style-338" viewBox="0 0 150 77.017">
+                                                            <img src="https://i.postimg.cc/ZnvFpQKk/pngegg-4.png" class="style-339">
+                                                        </div>
+                                                    </button>
+                                                    <div class="style-340"></div>
+                                                </div>
+                                                <div class="style-341">
+                                                    <div class="style-342">
+                                                        <button type="button" aria-label="Checkout with GPay" class="style-343"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="style-344">
+                <div class="style-345">
+                    <div class="style-346">
+                        <nav aria-label="Footer" class="style-347">
+                            <div class="style-348">
+                                <div class="style-349">
+                                    <h3 class="style-350" layout="[object Object]">
+                                        <div class="style-351">
+                                            <div class="style-352">About Us</div>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <div class="style-353">
+                                    <div class="style-354">
+                                        <ul class="style-355">
+                                            <li class="style-356"><a class="style-357" aria-label="Company Information" name="Company Information" href="/en-us/about-us/company-information">Company Information</a></li>
+                                            <li class="style-358"><a class="style-359" aria-label="Privacy Policy" name="Privacy Policy" href="/en-us/about-us/privacy-policy">Privacy Policy</a></li>
+                                            <li class="style-360"><a class="style-361" aria-label="Terms &amp; Conditions" name="Terms &amp; Conditions" href="/en-us/about-us/terms-and-conditions">Terms &amp; Conditions</a></li>
+                                            <li class="style-362"><a class="style-363" aria-label="Accessibility" name="Accessibility" href="/en-us/about-us/accessibility">Accessibility</a></li>
+                                            <li class="style-364">
+                                                <a class="style-365">
+                                                    <div class="style-366">Do Not Sell or Share My Personal Information / Targeted Ads</div>
+                                                </a>
+                                            </li>
+                                            <li class="style-367"><a class="style-368" aria-label="Limit Use of My Sensitive Personal Information" name="Limit Use of My Sensitive Personal Information" href="https://privacyportal.onetrust.com/webform/84bcbfa6-9d87-4573-b6f8-acfb1a7839a8/25bc4e8a-68ae-4a21-85da-165d4616e89a?source=footer">Limit Use of My Sensitive Personal Information</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-369">
+                                <div class="style-370">
+                                    <h3 class="style-371" layout="[object Object]">
+                                        <div class="style-372">
+                                            <div class="style-373">Customer Service</div>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <div class="style-374">
+                                    <div class="style-375">
+                                        <ul class="style-376">
+                                            <li class="style-377"><a class="style-378" aria-label="Order Status" name="Order Status" href="/en-us/orders/order-status">Order Status</a></li>
+                                            <li class="style-379"><a class="style-380" aria-label="FAQs" name="FAQs" href="/en-us/support/faqs">FAQs</a></li>
+                                            <li class="style-381"><a class="style-382" aria-label="Orders &amp; Payments" name="Orders &amp; Payments" href="/en-us/support/orders-payments">Orders &amp; Payments</a></li>
+                                            <li class="style-383"><a class="style-384" aria-label="Shipping" name="Shipping" href="/en-us/support/shipping">Shipping</a></li>
+                                            <li class="style-385"><a class="style-386" aria-label="Returns" name="Returns" href="/en-us/support/returns">Returns</a></li>
+                                            <li class="style-387"><a class="style-388" aria-label="Current Promotions" name="Current Promotions" href="/en-us/support/promotions">Current Promotions</a></li>
+                                            <li class="style-389"><a class="style-390" aria-label="Contact Us" name="Contact Us" href="/en-us/support/contact-us">Contact Us</a></li>
+                                            <li class="style-391"><a class="style-392" aria-label="Store Locator" name="Store Locator" rel="noreferrer" target="_blank" href="https://www.google.com/maps/search/The+Cosmetics+Company+Store/">Store Locator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="style-393">
+                            <div class="style-394">
+                                <a class="style-395" aria-label="insta" name="insta" target="_blank" href="">
+                                    <div class="style-396">
+                                        <div class="style-397">
+                                            <img src="https://i.postimg.cc/sxMFQP68/instagram-white-icon.png" class="style-398">
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="style-399" aria-label="facebook" name="facebook" target="_blank" href="">
+                                    <div class="style-400">
+                                        <div class="style-401">
+                                            <img src="https://i.postimg.cc/KzstyW6K/facebook-app-round-white-icon.png" class="style-402">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="style-403">
+                    <div class="style-404">
+                        <div class="style-405">
+                            <div class="style-406">
+                                <div class="style-407" viewBox="0 0 100 77.017">
+                                    <img src="https://i.postimg.cc/4yjP0gFN/294654-visa-icon.png" class="style-408">
+                                </div>
+                            </div>
+                            <div class="style-409">
+                                <div class="style-410" viewBox="0 0 100 77.017">
+                                    <img src="https://i.postimg.cc/X7yQCrpZ/pngwing-com-6.png" class="style-411">
+                                </div>
+                            </div>
+                            <div class="style-412">
+                                <div class="style-413" viewBox="0 0 100 77.017">
+                                    <img src="https://i.postimg.cc/d119t1bV/620670b9d7b91b0004122617.png" class="style-414">
+                                </div>
+                            </div>
+                            <div class="style-415">
+                                <div class="style-416" viewBox="0 0 100 77.017">
+                                    <img src="https://i.postimg.cc/ZnvFpQKk/pngegg-4.png" class="style-417">
+                                </div>
+                            </div>
+                            <div class="style-418">
+                                <div class="style-419" viewBox="0 0 100 77.017">
+                                    <img src="https://i.postimg.cc/59DDTdzC/google-pay-acceptance-mark-icon.png" class="style-420">
+                                </div>
+                            </div>
+                            <div class="style-421">
+                                <div class="style-422" viewBox="0 0 100 77.017">
+                                    <img src="https://i.postimg.cc/vmPNvpMD/Apple-Pay-Logo-wine.png" class="style-423">
+                                </div>
+                            </div>
+                            <div class="style-424">
+                                <div class="style-425" viewBox="0 0 100 77.017">
+                                    <img src="https://i.postimg.cc/jdz31WKp/pngwing-com-7.png" class="style-426">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="style-427" data-size="small" data-support-multiple-densities="true"></div>
+                    <div class="style-428"></div>
+                    <div class="style-429">
+                        <div class="style-430">This site is operated by Localised Inc., as authorized by The Cosmetics Company Store, Inc.</div>
+                        <a class="style-431" aria-label="Learn More" name="Learn More" href="/en-us/about-us/company-information">
+                            <div class="style-432">Learn More</div>
+                        </a>
+                        <div class="style-433">© The Cosmetic Company Store and its licensors. All rights reserved.</div>
+                    </div>
+                </div>
+                <button aria-label="Scroll up" class="style-434" name="Scroll up">
+                    <svg class="style-435">
+                        <use href="/themes/icons/sprites.svg?cb=1717687835923#arrow" class="style-436"></use>
+                    </svg>
+                </button>
+            </footer>
+            <input name="device-fingerprint" type="hidden" class="style-437" />
+        </div>
+        <div class="style-438" role="region"></div>
+    </div>
+    <div class="style-439"></div>
+    <div class="style-440">
+        <link href="/css/app_b57399ef6087d4d0a304.css" rel="stylesheet" as="style" onload="this.rel='stylesheet'" class="style-441" />
+        <link as="style" href="/themes/customProperties.css?v=20240608182324341" rel="stylesheet" class="style-442" />
+        <link as="style" href="/themes/styles.css?v=20240608182324342" rel="stylesheet" class="style-443" />
+        <link as="style" href="/themes/fonts/fonts.css?v=20240608182324343" rel="stylesheet" class="style-444" />
+    </div>
+    <iframe src="https://pay.google.com/gp/p/ui/payframe?origin=https%3A%2F%2Fwww.thecosmeticscompanystore.com&amp;mid=" height="0" width="0" allowpaymentrequest="true" class="style-445"></iframe>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const updateTotalPrice = (liElement) => {
+            const price = parseFloat(liElement.querySelector('.price').textContent);
+            const quantity = parseInt(liElement.querySelector('[data-testid="quantity-input"]').value);
+            const totalPriceElement = liElement.querySelector('.total-price');
+            const newTotalPrice = price * quantity;
+            totalPriceElement.textContent = newTotalPrice.toFixed(2);
+        };
+
+        const updateOverallTotal = () => {
+            let overallTotal = 0;
+            document.querySelectorAll('.total-price').forEach(element => {
+                overallTotal += parseFloat(element.textContent);
+            });
+            document.getElementById('overall-total').textContent = overallTotal.toFixed(2);
+        };
+
+        document.querySelectorAll('li[data-product-id]').forEach(liElement => {
+            const decrementButton = liElement.querySelector('[data-testid="decrement-btn"]');
+            const incrementButton = liElement.querySelector('[data-testid="increment-btn"]');
+            const quantityInput = liElement.querySelector('[data-testid="quantity-input"]');
+
+            const updateButtons = () => {
+                const quantityValue = parseInt(quantityInput.value);
+                decrementButton.disabled = quantityValue <= 1;
+                decrementButton.style.cursor = quantityValue <= 1 ? 'default' : 'pointer';
+            };
+
+            decrementButton.addEventListener('click', () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                    updateTotalPrice(liElement);
+                    updateOverallTotal();
+                }
+                updateButtons();
+            });
+
+            incrementButton.addEventListener('click', () => {
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+                updateTotalPrice(liElement);
+                updateOverallTotal();
+                updateButtons();
+            });
+
+            quantityInput.addEventListener('change', () => {
+                if (quantityInput.value < 1) {
+                    quantityInput.value = 1;
+                }
+                updateTotalPrice(liElement);
+                updateOverallTotal();
+                updateButtons();
+            });
+
+            updateButtons();
+        });
+
+        updateOverallTotal();
+    });
+
+
+</script>
+</html>

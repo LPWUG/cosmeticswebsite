@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/product1.css') }}">
+    <title>{{ product.name_product }}</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <!-- navbar code -->
+
+    <nav class="navbar">
+        <div class="logo"  data-testid="logo">
+            <a href="#" aria-label="Go back to the homepage" name="Go back to the homepage" href="/en-us/"><img src="https://i.postimg.cc/d0hMZxFh/pfa-logo.png"  class="style-77"></a>
+            <img src="https://i.postimg.cc/nr02tcDP/search-icon-png-9969.png" class="search-icon" alt="Search Icon">
+        </div>
+        
+
+            <form method="get" action="{{ url_for('market_page') }}" class="search-container">
+                <input type="text" name="search" placeholder="Search for products" class="form-control">
+                <button type="submit">Search</button>
+            </form>
+
+
+        <div class="nav-links">
+            <a class="style-72" aria-label="MY ACCOUNT" name="MY ACCOUNT" href="/en-us/account/sign-in">
+                <div class="style-73">MY ACCOUNT</div>
+            </a>
+            <a class="style-69" aria-label="My Account" data-testid="account-sign-in-link" name="My Account" href="/en-us/account/sign-in">
+                <img src="https://i.postimg.cc/nLyWjVTW/bags-icon-10469.png" class="style-70">
+            </a>
+        </div>
+    </nav>
+
+    <div class="search-box-container" id="search-box-container">
+        <input type="text" placeholder="Search for products..." id="search-input">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchIcon = document.querySelector('.search-icon');
+            const searchBoxContainer = document.getElementById('search-box-container');
+
+            searchIcon.addEventListener('click', function() {
+                searchBoxContainer.style.display = searchBoxContainer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+    <!-- navbar code -->
+
+    <!-- navbar2 code -->
+
+    <div class="style-101">
+        <div class="style-102">
+            <div class="style-103" data-testid="megamenu-navigation">
+                {% for category in categories %}
+                <a class="style-104" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="{{ url_for('category_page', category_id=category.id) }}">{{ category.name }}</a>
+                {% endfor %}
+               
+                
+                                <a class="style-106" aria-expanded="false" href=""></a>
+                                
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbar = document.querySelector('.style-103');
+            var skincareLink = document.querySelector('a[href="/en-us/skincare"]');
+            var skincareDropdown = skincareLink.nextElementSibling;
+            var skincareIcon = skincareLink.querySelector('.dropdown-icon');
+
+            var makeupLink = document.querySelector('a[href="/en-us/makeup"]');
+            var makeupDropdown = makeupLink.nextElementSibling;
+            var makeupIcon = makeupLink.querySelector('.dropdown-icon');
+
+            skincareLink.addEventListener('mouseover', function() {
+                if (window.innerWidth > 768) {
+                    skincareDropdown.style.display = 'block';
+                }
+            });
+
+            skincareLink.addEventListener('mouseout', function() {
+                if (window.innerWidth > 768) {
+                    skincareDropdown.style.display = 'none';
+                }
+            });
+
+            skincareDropdown.addEventListener('mouseover', function() {
+                if (window.innerWidth > 768) {
+                    skincareDropdown.style.display = 'block';
+                }
+            });
+
+            skincareDropdown.addEventListener('mouseout', function() {
+                if (window.innerWidth > 768) {
+                    skincareDropdown.style.display = 'none';
+                }
+            });
+
+            makeupLink.addEventListener('mouseover', function() {
+                if (window.innerWidth > 768) {
+                    makeupDropdown.style.display = 'block';
+                }
+            });
+
+            makeupLink.addEventListener('mouseout', function() {
+                if (window.innerWidth > 768) {
+                    makeupDropdown.style.display = 'none';
+                }
+            });
+
+            makeupDropdown.addEventListener('mouseover', function() {
+                if (window.innerWidth > 768) {
+                    makeupDropdown.style.display = 'block';
+                }
+            });
+
+            makeupDropdown.addEventListener('mouseout', function() {
+                if (window.innerWidth > 768) {
+                    makeupDropdown.style.display = 'none';
+                }
+            });
+
+            skincareIcon.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    var isOpen = skincareDropdown.style.display === 'block';
+                    skincareDropdown.style.display = isOpen ? 'none' : 'block';
+                }
+            });
+
+            makeupIcon.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    var isOpen = makeupDropdown.style.display === 'block';
+                    makeupDropdown.style.display = isOpen ? 'none' : 'block';
+                }
+            });
+        });
+    </script>
+
+    <!-- navbar2 code -->
+
+    <!-- main code -->
+
+    <main class="style-500">
+        <div class="style-501">
+            <div class="style-502" data-testid="product-container">
+                <div class="style-503" data-testid="productMain">
+                    <div class="style-504">
+                        <div class="style-505" data-testid="carouselGallery">
+                            <div class="style-506">
+                                <div class="style-507"><button aria-label="ESTEE LAUDER ADVANCED NIGHT REPAIR" class="style-508" name="ESTEE LAUDER ADVANCED NIGHT REPAIR">
+                                    <div class="style-509">
+                                        <div class="style-510">
+                                            <div class="style-511"><img alt="ESTEE LAUDER ADVANCED NIGHT REPAIR" height="750" src="{{ product.image_url_product }}" width="600" class="style-512" /></div>
+                                        </div>
+                                    </div>
+                                </button></div>
+                                <div class="style-513">
+                                    <div class="style-514">
+                                        <div class="style-515">
+                                            <div data-index="0" class="style-516" tabindex="-1" aria-hidden="false">
+                                                <div class="style-517">
+                                                    <div class="style-518" tabindex="-1">
+                                                        <div class="style-519">
+                                                            <div dir="ltr" class="style-520">
+                                                                <div class="style-521">
+                                                                    <div class="style-522">
+                                                                        <img src="{{ product.image_url_product }}" alt="ESTEE LAUDER ADVANCED NIGHT REPAIR" class="style-523"/>
+                                                                        <div class="style-524"><img alt="" src="{{ product.image_url_product }}" class="style-525" /></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-526" data-testid="productMain-group-2">
+                            <div class="style-527" data-testid="productBrandName"><a class="style-528" href="/en-us/skincare/brands/estee-lauder">
+                                <h3 class="style-529" data-testid="brand">
+                                    <div class="style-530">
+                                        <div class="style-531" itemprop="brand">See all ESTEE LAUDER</div>
+                                    </div>
+                                </h3>
+                            </a></div>
+                            <div class="style-532" data-testid="productName">
+                                <h1 class="style-533" data-testid="product-name">
+                                    <div class="style-534">
+                                        <div class="style-535" itemprop="name">{{ product.name_product }}</div>
+                                    </div>
+                                </h1>
+                            </div>
+                            <br/>
+                            <div class="style-536"><span class="style-537" data-testid="originalPrice"></span><span class="style-539" data-testid="currentPrice"><span>Price :</span>{{ product.price_product }}</span></div>
+                            <br/>
+                            <div class="style-542">
+                                <afterpay-placement data-amount="64.4" data-currency="USD" data-locale="en_US" data-modal-theme="white" data-size="sm" class="style-543"></afterpay-placement>
+                            </div>
+                            
+                            <div class="style-547">
+                                <div data-testid="color-options" class="style-548">
+                                    <div class="style-549"><span class="style-550">Color:</span><span class="style-551">None</span></div>
+                                </div>
+                            </div>
+                            <div class="style-552">
+                                <div class="style-553" data-testid="size-options">
+                                    <div class="style-554">
+                                        <div class="style-555"><span class="style-556">Size:</span><span class="style-557">{{ product.size_product }}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-558" data-testid="quantitySelector">
+                                <div class="style-559"><span class="style-560">Quantity</span><span class="style-561"></span></div>
+                                <div class="style-562">
+                                    <div class="style-563" data-testid="quantity-selector">
+                                        <button aria-label="Reduce quantity by one" class="style-564" data-testid="decrement-btn" disabled="" name="Reduce quantity by one" type="button">
+                                            <div class="style-565">
+                                                <img src="https://i.postimg.cc/BvX9MLBx/pngegg-1.png" class="style-566">
+                                            </div>
+                                        </button>
+                                        <input aria-label="Quantity input" class="style-567" data-testid="quantity-input" lang="en" max="5" min="1" type="number" value="1" />
+                                        <button aria-label="Increase quantity by one" class="style-568" data-testid="increment-btn" name="Increase quantity by one" type="button">
+                                            <div class="style-569">
+                                                <img src="https://i.postimg.cc/ZnGQWGyB/plus-104-32.png" class="style-570">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-571" data-testid="addToCart">
+                                <div class="style-572">
+                                    <button aria-label="Add to Bag" class="style-573" data-testid="add-to-cart" name="Add to Bag" type="button">Add to Bag</button>
+                                    <div class="style-574">
+                                        <button aria-label="Favorites" aria-pressed="false" class="style-575" name="Favorites">
+                                            <div class="style-576">
+                                                <div class="style-577">
+                                                    <div class="style-578">
+                                                        <div class="style-579">
+                                                            <img src="https://i.postimg.cc/Sx0HWSZK/heart-3510-1.png" class="style-580">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-581">
+                                <span class="style-582">
+                                    <div class="style-583">
+                                        <div class="style-584">
+                                            <img src="https://i.postimg.cc/X7jWYgrN/image-15-removebg-preview.png" class="style-585">
+                                        </div>
+                                    </div>
+                                    <div class="style-586">{{ product.shipping_address_product }}</div>
+                                </span>
+                            </div>
+                            <div class="style-587" data-testid="productDescription">
+                                <div data-testid="productDescription" class="style-588">
+                                    <div class="style-589">
+                                        <div class="style-590">
+                                            <h3 class="style-591">DESCRIPTION :</h3>
+                                            <br/>
+                                            <p>{{ product.description_product }}</p>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="style-603">
+                    <div class="style-604" data-testid="relatedItems">
+                        <div class="style-605">
+                            <h2 class="style-606">
+                                <div class="style-607">
+                                    <div class="style-608">You may also like...</div>
+                                </div>
+                            </h2>
+                        </div>
+                        <div class="style-609">
+                            <div class="style-610">
+                                <div class="style-611">
+                                    <div class="style-612">
+                                        <div class="style-613">
+                                            <div data-testid="skeleton-card-0" class="style-614">
+                                                <div class="style-615">
+                                                    <div class="style-616">
+                                                        <div class="style-617">
+                                                            <div class="style-618">
+                                                                <div class="style-619"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-620">
+                                                    <div class="style-621"></div>
+                                                    <div class="style-622"></div>
+                                                    <div class="style-623"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-1" class="style-624">
+                                                <div class="style-625">
+                                                    <div class="style-626">
+                                                        <div class="style-627">
+                                                            <div class="style-628">
+                                                                <div class="style-629"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-630">
+                                                    <div class="style-631"></div>
+                                                    <div class="style-632"></div>
+                                                    <div class="style-633"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-2" class="style-634">
+                                                <div class="style-635">
+                                                    <div class="style-636">
+                                                        <div class="style-637">
+                                                            <div class="style-638">
+                                                                <div class="style-639"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-640">
+                                                    <div class="style-641"></div>
+                                                    <div class="style-642"></div>
+                                                    <div class="style-643"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-3" class="style-644">
+                                                <div class="style-645">
+                                                    <div class="style-646">
+                                                        <div class="style-647">
+                                                            <div class="style-648">
+                                                                <div class="style-649"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-650">
+                                                    <div class="style-651"></div>
+                                                    <div class="style-652"></div>
+                                                    <div class="style-653"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-4" class="style-654">
+                                                <div class="style-655">
+                                                    <div class="style-656">
+                                                        <div class="style-657">
+                                                            <div class="style-658">
+                                                                <div class="style-659"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-660">
+                                                    <div class="style-661"></div>
+                                                    <div class="style-662"></div>
+                                                    <div class="style-663"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- main code -->
+
+
+    <!-- footer code -->
+
+    <footer class="style-239">
+
+
+        <div class="style-240">
+            <form class="style-241">
+                <div class="style-242">
+                    <h4 class="style-243">Sign up for The Cosmetics Company Store emails.</h4>
+                    <div class="style-244">
+                        <div class="style-245">
+                            <input class="style-246" data-testid="email-signup-input" name="email-signup-input" placeholder="Enter your email" title="Enter your email" type="text" value="" />
+                        </div>
+                        <button aria-label="email-signup-submit" class="style-247" data-testid="email-signup-submit" name="email-signup-submit" type="submit">
+                            <div class="style-248">Subscribe</div>
+                        </button>
+                    </div>
+                    <div class="style-249" data-size="small" data-support-multiple-densities="true"></div>
+                    <div class="style-250"></div>
+                </div>
+            </form>
+        </div>
+
+        <div class="style-251">
+            <div class="style-252">
+                <nav aria-label="Footer" class="style-253">
+                    <div class="style-254">
+                        <div class="style-255">
+                            <h3 class="style-256" layout="[object Object]">
+                                <div class="style-257">
+                                    <div class="style-258">About Us</div>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="style-259">
+                            <div class="style-260">
+                                <ul class="style-261">
+                                    <li class="style-262"><a class="style-263" aria-label="Company Information" name="Company Information" href="/en-us/about-us/company-information">Company Information</a></li>
+                                    <li class="style-264"><a class="style-265" aria-label="Privacy Policy" name="Privacy Policy" href="/en-us/about-us/privacy-policy">Privacy Policy</a></li>
+                                    <li class="style-266"><a class="style-267" aria-label="Terms &amp; Conditions" name="Terms &amp; Conditions" href="/en-us/about-us/terms-and-conditions">Terms &amp; Conditions</a></li>
+                                    <li class="style-268"><a class="style-269" aria-label="Accessibility" name="Accessibility" href="/en-us/about-us/accessibility">Accessibility</a></li>
+                                    <li class="style-270">
+                                        <a class="style-271">
+                                            <div class="style-272">Do Not Sell or Share My Personal Information / Targeted Ads</div>
+                                        </a>
+                                    </li>
+                                    <li class="style-273"><a class="style-274" aria-label="Limit Use of My Sensitive Personal Information" name="Limit Use of My Sensitive Personal Information" href="https://privacyportal.onetrust.com/webform/84bcbfa6-9d87-4573-b6f8-acfb1a7839a8/25bc4e8a-68ae-4a21-85da-165d4616e89a?source=footer">Limit Use of My Sensitive Personal Information</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="style-275">
+                        <div class="style-276">
+                            <h3 class="style-277" layout="[object Object]">
+                                <div class="style-278">
+                                    <div class="style-279">Customer Service</div>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="style-280">
+                            <div class="style-281">
+                                <ul class="style-282">
+                                    <li class="style-283"><a class="style-284" aria-label="Order Status" name="Order Status" href="/en-us/orders/order-status">Order Status</a></li>
+                                    <li class="style-285"><a class="style-286" aria-label="FAQs" name="FAQs" href="/en-us/support/faqs">FAQs</a></li>
+                                    <li class="style-287"><a class="style-288" aria-label="Orders &amp; Payments" name="Orders &amp; Payments" href="/en-us/support/orders-payments">Orders &amp; Payments</a></li>
+                                    <li class="style-289"><a class="style-290" aria-label="Shipping" name="Shipping" href="/en-us/support/shipping">Shipping</a></li>
+                                    <li class="style-291"><a class="style-292" aria-label="Returns" name="Returns" href="/en-us/support/returns">Returns</a></li>
+                                    <li class="style-293"><a class="style-294" aria-label="Current Promotions" name="Current Promotions" href="/en-us/support/promotions">Current Promotions</a></li>
+                                    <li class="style-295"><a class="style-296" aria-label="Contact Us" name="Contact Us" href="/en-us/support/contact-us">Contact Us</a></li>
+                                    <li class="style-297"><a class="style-298" aria-label="Store Locator" name="Store Locator" rel="noreferrer" target="_blank" href="https://www.google.com/maps/search/The+Cosmetics+Company+Store/">Store Locator</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="style-299">
+                    <div class="style-300">
+                        <a class="style-301" aria-label="insta" name="insta" target="_blank" href="">
+                            <div class="style-302">
+                                <div class="style-303">
+                                    <img src="https://i.postimg.cc/sxMFQP68/instagram-white-icon.png" class="style-304">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="style-305" aria-label="facebook" name="facebook" target="_blank" href="">
+                            <div class="style-306">
+                                <div class="style-307">
+                                    <img src="https://i.postimg.cc/KzstyW6K/facebook-app-round-white-icon.png" class="style-308">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="style-309">
+            <div class="style-310">
+                <div class="style-311">
+                    <div class="style-312">
+                        <div class="style-313" viewBox="0 0 100 77.017">
+                            <img src="https://i.postimg.cc/4yjP0gFN/294654-visa-icon.png" class="style-314">
+                        </div>
+                    </div>
+                    <div class="style-315">
+                        <div class="style-316" viewBox="0 0 100 77.017">
+                            <img src="https://i.postimg.cc/X7yQCrpZ/pngwing-com-6.png" class="style-317">
+                        </div>
+                    </div>
+                    <div class="style-318">
+                        <div class="style-319" viewBox="0 0 100 77.017">
+                            <img src="https://i.postimg.cc/d119t1bV/620670b9d7b91b0004122617.png" class="style-320">
+                        </div>
+                    </div>
+                    <div class="style-321">
+                        <div class="style-322" viewBox="0 0 100 77.017">
+                            <img src="https://i.postimg.cc/ZnvFpQKk/pngegg-4.png" class="style-323">
+                        </div>
+                    </div>
+                    <div class="style-324">
+                        <div class="style-325" viewBox="0 0 100 77.017">
+                            <img src="https://i.postimg.cc/59DDTdzC/google-pay-acceptance-mark-icon.png" class="style-326">
+                        </div>
+                    </div>
+                    <div class="style-327">
+                        <div class="style-328" viewBox="0 0 100 77.017">
+                            <img src="https://i.postimg.cc/vmPNvpMD/Apple-Pay-Logo-wine.png" class="style-329">
+                        </div>
+                    </div>
+                    <div class="style-330">
+                        <div class="style-331" viewBox="0 0 100 77.017">
+                            <img src="https://i.postimg.cc/jdz31WKp/pngwing-com-7.png" class="style-332">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="style-333" data-size="small" data-support-multiple-densities="true"></div>
+            <div class="style-334"></div>
+            <div class="style-335">
+                <div class="style-336">This site is operated by Localised Inc., as authorized by The Cosmetics Company Store, Inc.</div>
+                <a class="style-337" aria-label="Learn More" name="Learn More" href="/en-us/about-us/company-information">
+                    <div class="style-338">Learn More</div>
+                </a>
+                <div class="style-339">© The Cosmetic Company Store and its licensors. All rights reserved.</div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- footer code -->
+
+</body>
+</html>
