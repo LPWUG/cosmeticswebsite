@@ -1,0 +1,275 @@
+.style-0 {
+    display: grid;
+    grid-template-columns: 80%;
+    margin-bottom: 5rem;
+    justify-content: center;
+    line-height: 200%;
+}
+@media (min-width: 993px) {
+    .style-0 {
+        box-sizing: border-box;
+        min-width: 0px;
+        margin-left: 2rem;
+        margin-top: 5rem;
+    }
+}
+@media (max-width: 993px) {
+    .style-0 {
+        box-sizing: border-box;
+        min-width: 0px;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+.style-1 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-2 {
+font-weight: 500;
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-3 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-4 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-5 {
+font-weight: 500;
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-6 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-7 {
+box-sizing: border-box;
+}
+
+.style-8 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-9 {
+font-weight: 500;
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-10 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-11 {
+border-collapse: collapse;
+box-sizing: border-box;
+margin: 30px 0px;
+}
+
+.style-12 {
+box-sizing: border-box;
+}
+
+.style-13 {
+box-sizing: border-box;
+}
+
+.style-14 {
+box-sizing: border-box;
+border: 0.8px solid rgb(34, 34, 34);
+padding: 10px;
+}
+
+.style-15 {
+box-sizing: border-box;
+border: 0.8px solid rgb(34, 34, 34);
+padding: 10px;
+}
+
+.style-16 {
+box-sizing: border-box;
+border: 0.8px solid rgb(34, 34, 34);
+padding: 10px;
+}
+
+.style-17 {
+box-sizing: border-box;
+}
+
+.style-18 {
+box-sizing: border-box;
+}
+
+.style-19 {
+box-sizing: border-box;
+border: 0.8px solid rgb(34, 34, 34);
+padding: 10px;
+}
+
+.style-20 {
+box-sizing: border-box;
+border: 0.8px solid rgb(34, 34, 34);
+padding: 10px;
+}
+
+.style-21 {
+box-sizing: border-box;
+border: 0.8px solid rgb(34, 34, 34);
+padding: 10px;
+}
+
+.style-22 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-23 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-24 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-25 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-26 {
+font-weight: 500;
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-27 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-28 {
+text-decoration: underline solid rgb(121, 121, 121);
+background-color: rgba(0, 0, 0, 0);
+color: rgb(121, 121, 121);
+cursor: pointer;
+box-sizing: border-box;
+font-weight: 400;
+}
+
+.style-29 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-30 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-31 {
+text-decoration: underline solid rgb(121, 121, 121);
+background-color: rgba(0, 0, 0, 0);
+color: rgb(121, 121, 121);
+cursor: pointer;
+box-sizing: border-box;
+font-weight: 400;
+}
+
+.style-32 {
+box-sizing: border-box;
+font-size: 13px;
+}
+
+.style-33 {
+font-weight: 500;
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-34 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-35 {
+box-sizing: border-box;
+padding-left: 20px;
+}
+
+.style-36 {
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-37 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-38 {
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-39 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-40 {
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}
+
+.style-41 {
+margin: 0px 0px 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+max-width: 1496px;
+}

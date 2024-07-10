@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/Orders&Payments.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="style-0">
+    <div class="style-1">
+        <h3 class="style-2">Purchase Policy :</h3>
+        <p class="style-3">As a Customer of this store, you agree that the merchandise purchased is for gifts or your own personal use and may not be resold.<br class="style-4" />
+            You agree that we have the right to prohibit access to anyone we, in our discretion suspect of reselling any merchandise purchased here.<br class="style-5" />
+            These products are sold on an “as is” basis.<br class="style-6" />
+            We reserve the right to limit quantities on individual items and/or bundles and the total amount purchased. You may purchase no more than 5 units of any one item and/or bundles per transaction per day, unless otherwise noted. The total amount of your purchase may be no more than $1,000 (excluding tax) per day.<br class="style-7" />
+            For products with a price point higher than $500, quantities are limited to 1 unit per day. This item is excluded from the maximum purchase limit of $1,000 (excluding tax).<br class="style-8" />
+            The merchandise sold in this store includes: Manufacturer’s Overruns, Seasonal Items, Retailer’s Overstock, Packaging Changes, Specialized Size Products and Discontinued Items.</p>
+    </div>
+    <div class="style-9">
+        <h3 class="style-10">Can I make changes to my order?</h3>
+        <p class="style-11">Unfortunately, we can't make changes to your order after it's placed. Therefore, we recommend you carefully check your item details and shipping information before ordering.</p>
+    </div>
+    <div class="style-12">
+        <h3 class="style-13">Can I cancel my order or change it before it ships?</h3>
+        <p class="style-14">We want you to get your items as soon as possible, and so we process orders as soon as we receive them. Unfortunately, that also means we can't make any changes after your order is placed. This includes canceling your entire order (or part of it), changing the address, changing the shipping method, and adding, replacing, or removing items from your order.</p>
+    </div>
+    <div class="style-15">
+        <h3 class="style-16">Where do you ship?</h3>
+        <p class="style-17">All orders ship with UPS ground service, and therefore we can only ship to addresses within the 48 contiguous United States at this time.<br class="style-18" />
+            We regret that we are unable to ship PO Boxes, APO, FPO, DPO Military addresses at this time. We apologize for any inconvenience.</p>
+    </div>
+    <div class="style-19">
+        <h3 class="style-20">What payment methods can I use?</h3>
+        <p class="style-21">We accept the following payment methods:</p>
+        <p class="style-22">Visa, Mastercard, Maestro Amex, PayPal, Apple Pay, Google Pay, JCB, Sofort</p>
+    </div>
+    <div data-testid="markdown-container" class="style-23">
+        <div class="style-24" data-testid="markdown-0">
+            <ul class="style-25">
+                <li class="style-26">Visa</li>
+                <li class="style-27">MasterCard</li>
+                <li class="style-28">American Express</li>
+                <li class="style-29">PayPal</li>
+                <li class="style-30">Apple Pay: On the web in Safari and most iOS devices</li>
+                <li class="style-31">Google Pay</li>
+            </ul>
+        </div>
+    </div>
+    <div class="style-32">
+        <p class="style-33">Once you place your order, we'll place an authorization hold for the order amount. This means its cost will be set aside on your card. However, your card will not actually be billed until your order ships.</p>
+    </div>
+    <div class="style-34">
+        <h3 class="style-35">Why is there a pending charge on my card?</h3>
+        <p class="style-36">When you place your order using a credit card, its cost is set aside on your card. However, your card will not actually be billed until your order ships.</p>
+        <p class="style-37">When you place your order using a debit card, the cost will be deducted from your account. However, your bank will only transfer it to us when your order ships.</p>
+        <p class="style-38">This can be done for a limited time only. So if your order is delayed for any reason, we may ask the bank to extend its hold until it's time to ship your items.</p>
+        <p class="style-39">If your order is canceled for any reason, we'll ask your bank to remove the hold and release the money back to your account. This usually takes 7-21 days, but the time may vary based on your bank's policy. Reach out to your bank for more information.</p>
+    </div>
+    <div class="style-40">
+        <h3 class="style-41">How can I use a promo code?</h3>
+        <p class="style-42">If you have a coupon or promo code you want to use, type or copy it into the Promo Code box in your shopping bag page, and click "+". Don't worry, codes are not case-sensitive. If your promo code doesn't work, it may be because:</p>
+        <ol class="style-43">
+            <li class="style-44">
+                <p class="style-45">Some of the promotion conditions are not met</p>
+            </li>
+            <li class="style-46">
+                <p class="style-47">The promo code doesn't apply to the items in your bag</p>
+            </li>
+            <li class="style-48">
+                <p class="style-49">The code expired</p>
+            </li>
+        </ol>
+    </div>
+    <div class="style-50">
+        <h3 class="style-51">Can I have my order gift wrapped?</h3>
+        <p class="style-52">At this time we’re not offering gift wrap or shopping bags with deliveries.<br class="style-53" />
+            You may want to inform the lucky gift recipient, so they know to expect a parcel!</p>
+    </div>
+    <div class="style-54">
+        <h3 class="style-55">Why should I have an account with The beauty haven store?</h3>
+        <p class="style-56">When you have an account with us, you can check out faster, see your past orders, and save frequently used addresses and payment methods. We'll also let you know first about sales or new arrivals. Creating an account is easy, and you only need a valid email address or mobile phone number.</p>
+    </div>
+    <div class="style-57">
+        <h3 class="style-58">I forgot my password. What should I do?</h3>
+        <p class="style-59">Don't worry, it happens! Here are a few things you can do:</p>
+        <p class="style-60">Click the Forgot Password link on the login page. This will send you a password reset link via text (SMS) or email.<br class="style-61" />
+            If you don't see your link, make sure you have an account with The beauty haven store and check the spam folder of your email client or SMS app.<br class="style-62" />
+            To protect your personal information, your account will be locked after several failed login attempts. In that case, wait a few hours and try again.</p>
+        <p class="style-63">If you're still not able to log in to your account after that time, please reach out to us <a class="style-64" href="/en-us/support/contact-us">here</a>, and we'll do our best to help.</p>
+    </div>
+    <div class="style-65">
+        <h3 class="style-66">How can I change the login email or phone number on my account?</h3>
+        <p class="style-67">It's not possible to change the login email or phone number, but you're welcome to <a class="style-68" href="/en-us/account/create">create a new account</a> with your new email address.</p>
+    </div>
+    <div class="style-69">
+        <h3 >How can I delete my account?</h3>
+        <p class="style-71">To delete your The beauty haven store account, please send your request <a class="style-72" href="/en-us/support/contact-us">through this form</a>. One of our customer service experts will reach out within 7 days to confirm your account has been deleted.</p>
+    </div>
+</div>
+{% endblock %}

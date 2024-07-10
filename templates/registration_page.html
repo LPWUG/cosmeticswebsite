@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/registration_page.css') }}">
+    <script src="{{ url_for('static', filename='scripts/registration_page.js') }}"></script>
+{% endblock %}
+
+
+{% block content %} 
+
+    <!-- main code -->
+
+    <main class="style-138">
+        <div class="style-139">
+            <div class="style-140">
+                <div class="style-141">
+                    <div class="style-142">
+                        <h1 class="style-143">
+                            <div class="style-144">
+                                <div class="style-145">New Account</div>
+                            </div>
+                        </h1>
+                    </div>
+                    <div class="style-146">
+                        <div class="style-147">Create a new The beauty haven store account</div>
+                    </div>
+                    <div class="style-148">
+                        <div class="style-149">
+                            <div class="style-150">
+                                <div class="style-151">
+                                    <form class="style-152" method="POST" name="account-create-form">
+                                        {{ form.hidden_tag() }}
+                                        <div class="style-153">
+                                            <div class="style-154">
+                                                <div class="style-155">
+                                                    <label class="style-156" for="given_name">
+                                                        <div class="style-157">Username</div>
+                                                    </label>
+                                                </div>
+                                                <div class="style-158" dir="ltr">
+                                                    <div class="style-159">
+                                                        <div class="style-160">
+                                                            <img src="https://i.postimg.cc/MpMB6PfL/sotop-togo-removebg-preview.png" class="style-161">
+                                                        </div>
+                                                    </div>
+                                                    {{ form.username(class="style-162",type="text",placeholder="username") }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="style-173">
+                                            <div class="style-174">
+                                                <div class="style-175">
+                                                    <label class="style-176" for="email">
+                                                        <div class="style-177">Email</div>
+                                                    </label>
+                                                </div>
+                                                <div class="style-178">
+                                                    <div class="style-179" dir="ltr">
+                                                        <div class="style-180">
+                                                            <div class="style-181">
+                                                                <div class="style-182">
+                                                                    <img src="https://i.postimg.cc/D0pWFLvF/Adobe-Stock-596501247-Preview-removebg-preview.png" class="style-183">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                     
+                                                        {{ form.email_address(type="email",class="style-184", placeholder="Email") }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="style-185">
+                                            <div class="style-186">
+                                                <div class="style-187">
+                                                    <label class="style-188" for="password">
+                                                        <div class="style-189">New password</div>
+                                                    </label>
+                                                </div>
+                                                <div class="style-190" dir="ltr">
+                                                    <div class="style-191">
+                                                        <div class="style-192">
+                                                            <img src="https://i.postimg.cc/15RjJQc7/image-16-removebg-preview.png" class="style-193">
+                                                        </div>
+                                                    </div>
+                                                    {{ form.password1(class="style-194",type="password",placeholder="Password") }}
+                                                    <div class="style-195">
+                                                        <button class="style-196" data-testid="" title="Show password" type="button">
+                                                            <div class="style-197">
+                                                                <img src="https://i.postimg.cc/wxNTjCwL/image-17.png" class="style-198">
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="style-199">
+                                            <div class="style-200">
+                                                <div class="style-201">
+                                                    <label class="style-202" for="confirmPassword">
+                                                        <div class="style-203">Confirm new password</div>
+                                                    </label>
+                                                </div>
+                                                <div class="style-204" data-validationstatus="false" dir="ltr">
+                                                    <div class="style-205">
+                                                        <div class="style-206">
+                                                            <img src="https://i.postimg.cc/15RjJQc7/image-16-removebg-preview.png" class="style-207">
+                                                        </div>
+                                                    </div>
+                                                    {{ form.password2(class="style-208",type="password",placeholder="Retype Password") }}
+                                                    <div class="style-209">
+                                                        <button class="style-210" data-testid="" title="Show password" type="button">
+                                                            <div class="style-211">
+                                                                <img src="https://i.postimg.cc/wxNTjCwL/image-17.png" class="style-212">
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        
+                                       
+                                        <div class="style-231">
+                     
+                                            {{ form.submit(class="style-232") }}
+                                        </div>
+                                    </form>
+                                    <div class="style-233"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-234">
+                            <div class="style-235">Already have an account with The beauty haven store United States?</div>
+                        </div>
+                        <div class="style-236">
+                            <a class="style-237" href="{{url_for ('sign_in_page')}}">
+                                <span class="style-238" data-testid="sign-in-link" type="submit">Sign In</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% block inner_content %}
+    <!-- main code -->
+    <div class="style-240">
+        <div class="style-241">
+            <div class="style-242">
+                <h4 class="style-243">Sign up for The Cosmetics Company Store emails.</h4>
+                <div class="style-244">
+                    <div class="style-245">
+                    
+                    
+                    <form method="POST" action="{{ url_for('market_page') }}">
+                        {{ email_form.hidden_tag() }} 
+                        {{ email_form.email(class="style-246", placeholder="Enter your email", id="email") }}
+                        {{ email_form.Submit(class="style-247") }}
+                    </button>
+                    </form>
+                    </div>
+            
+                </div>
+                <div class="style-249" data-size="small" data-support-multiple-densities="true"></div>
+                <div class="style-250"></div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+{% endblock %}

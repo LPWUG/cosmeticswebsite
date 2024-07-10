@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/android-chrome-192x192.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    {% block extra_head %}
+    {% endblock %}
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    
+    <link rel="stylesheet" href="fix elements.css">
+</head>
+<body>
+
+            {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+
+                  <div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+                    <strong>{{ message }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        <!-- navbar code -->
+        <nav class="navbar">
+            <div class="logo"  data-testid="logo">
+                <a href="#" aria-label="Go to navigation" name="Go to navigation" href="/en-us/"><img src="https://i.postimg.cc/2Sf9pR0f/pngwing-com-8.png"  class="style-navigation"></a>
+                <a aria-label="Go back to the homepage" name="Go back to the homepage" href="{{url_for('market_page')}}"><img src="https://i.postimg.cc/d0hMZxFh/pfa-logo.png"  class="style-77"></a>
+                <img src="https://i.postimg.cc/nr02tcDP/search-icon-png-9969.png" class="search-icon" alt="Search Icon">
+            </div>
+            
+          
+            <form method="get" action="{{ url_for('market_page') }}" class="search-container">
+                <input type="text" name="search" placeholder="Search for products" class="form-control">
+                <button type="submit">Search</button>
+            </form>
+    
+            <div class="nav-links">
+
+                <a class="style-69" aria-label="favourite" data-testid="favourite-link" name="favourite" href="{{ url_for('favorites_products') }}">
+                    <img src="https://i.postimg.cc/05FDK5sp/white-heart-512x502.png" class="style-70">
+                </a>
+                <a class="style-69" aria-label="Basket" data-testid="Basket-link" name="Basket" href="{{ url_for('cart_page') }}">
+                    <img src="https://i.postimg.cc/nLyWjVTW/bags-icon-10469.png" class="style-70">
+                </a>
+                {% if current_user.is_authenticated %}
+                                    <a href="{{ url_for('dashboard_page') }}" style="color:white;">Dashboard</a>
+                                    <a href="{{ url_for('logout_page') }}" style="color:white;">Log out</a>
+                                    {% else %}
+                                        <a href="{{ url_for('sign_in_page') }}" style="color:white;">Log in</a></a>
+                                    {% endif %}
+            </div>
+        </nav>
+    
+        <div class="search-box-container" id="search-box-container">
+            <input type="text" placeholder="Search for products..." id="search-input">
+        </div>
+    
+        <!-- navbar code -->
+    
+        <!-- navbar2 code -->
+    
+        <div class="style-101">
+            <div class="style-102">
+                <div class="style-103" data-testid="megamenu-navigation">
+                    <a class="style-104" style="color: red; font-weight: bold;" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="{{ url_for('index') }}">Recommendation Products</a>
+                    {% for category in categories %}
+                <a class="style-104" data-testid="megamenu-navigation-root-link" aria-expanded="false" href="{{ url_for('category_page', category_id=category.id) }}">{{ category.name }}</a>
+                {% endfor %}
+                
+                </div>
+            </div>
+        </div>
+    
+        <!-- navbar2 code -->
+
+        {% block content %}
+        {% block inner_content %}
+        {% endblock %}
+        {% endblock %}
+
+
+
+        <!-- footer code -->
+
+        <footer class="style-239">
+
+
+            
+            
+
+            <div class="style-251">
+                <div class="style-252">
+                    <nav aria-label="Footer" class="style-253">
+                        <div class="style-254">
+                            <div class="style-255">
+                                <h3 class="style-256" layout="[object Object]">
+                                    <div class="style-257">
+                                        <div class="style-258">About Us</div>
+                                    </div>
+                                </h3>
+                            </div>
+                            <div class="style-259">
+                                <div class="style-260">
+                                    <ul class="style-261">
+                                        <li class="style-262"><a class="style-263" style="color: white;" aria-label="Company Information" name="Company Information" href="{{ url_for('about_page') }}">Company Information</a></li>
+                                        <li class="style-264"><a class="style-265" aria-label="Privacy Policy" name="Privacy Policy" href="{{url_for('privacy_page')}}">Privacy Policy</a></li>
+                                        <li class="style-266"><a class="style-267" aria-label="Terms &amp; Conditions" name="Terms &amp; Conditions" href="{{url_for('terms_conditions')}}">Terms &amp; Conditions</a></li>
+                                        <li class="style-268"><a class="style-269" aria-label="Accessibility" name="Accessibility" href="{{url_for('accessibility_page')}}">Accessibility</a></li>
+                                        <li class="style-270">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-275">
+                            <div class="style-276">
+                                <h3 class="style-277" layout="[object Object]">
+                                    <div class="style-278">
+                                        <div class="style-279">Customer Service</div>
+                                    </div>
+                                </h3>
+                            </div>
+                            <div class="style-280">
+                                <div class="style-281">
+                                    <ul class="style-282">
+                                        <li class="style-285"><a class="style-286" aria-label="FAQs" name="FAQs" href="{{url_for('faq_page')}}">FAQs</a></li>
+                                        <li class="style-287"><a class="style-288" aria-label="Orders &amp; Payments" name="Orders &amp; Payments" href="{{url_for('orders_payments')}}">Orders &amp; Payments</a></li>
+                                        <li class="style-289"><a class="style-290" aria-label="Shipping" name="Shipping" href="{{url_for('shipping_page')}}">Shipping</a></li>
+                                        <li class="style-291"><a class="style-292" aria-label="Returns" name="Returns" href="{{url_for('returns_page')}}">Returns</a></li>
+                                        <li class="style-293"><a class="style-294" aria-label="Current Promotions" name="Current Promotions" href="{{url_for('promotions_page')}}">Current Promotions</a></li>
+                                        <li class="style-295"><a class="style-296" aria-label="Contact Us" name="Contact Us" href="/en-us/support/contact-us">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="style-299">
+                        <div class="style-300">
+                            <a class="style-301" aria-label="insta" name="insta" target="_blank" href="">
+                                <div class="style-302">
+                                    <div class="style-303">
+                                        <img src="https://i.postimg.cc/sxMFQP68/instagram-white-icon.png" class="style-304">
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="style-305" aria-label="facebook" name="facebook" target="_blank" href="">
+                                <div class="style-306">
+                                    <div class="style-307">
+                                        <img src="https://i.postimg.cc/KzstyW6K/facebook-app-round-white-icon.png" class="style-308">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-309">
+                <div class="style-310">
+                    <div class="style-311">
+                        <div class="style-312">
+                            <div class="style-313" viewBox="0 0 100 77.017">
+                                <img src="https://i.postimg.cc/4yjP0gFN/294654-visa-icon.png" class="style-314">
+                            </div>
+                        </div>
+                        <div class="style-315">
+                            <div class="style-316" viewBox="0 0 100 77.017">
+                                <img src="https://i.postimg.cc/X7yQCrpZ/pngwing-com-6.png" class="style-317">
+                            </div>
+                        </div>
+                        <div class="style-318">
+                            <div class="style-319" viewBox="0 0 100 77.017">
+                                <img src="https://i.postimg.cc/d119t1bV/620670b9d7b91b0004122617.png" class="style-320">
+                            </div>
+                        </div>
+                        <div class="style-321">
+                            <div class="style-322" viewBox="0 0 100 77.017">
+                                <img src="https://i.postimg.cc/ZnvFpQKk/pngegg-4.png" class="style-323">
+                            </div>
+                        </div>
+                        <div class="style-324">
+                            <div class="style-325" viewBox="0 0 100 77.017">
+                                <img src="https://i.postimg.cc/59DDTdzC/google-pay-acceptance-mark-icon.png" class="style-326">
+                            </div>
+                        </div>
+                        <div class="style-327">
+                            <div class="style-328" viewBox="0 0 100 77.017">
+                                <img src="https://i.postimg.cc/vmPNvpMD/Apple-Pay-Logo-wine.png" class="style-329">
+                            </div>
+                        </div>
+                        <div class="style-330">
+                            <div class="style-331" viewBox="0 0 100 77.017">
+                                <img src="https://i.postimg.cc/jdz31WKp/pngwing-com-7.png" class="style-332">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="style-333" data-size="small" data-support-multiple-densities="true"></div>
+                <div class="style-334"></div>
+                <div class="style-335">
+                    <div class="style-336">This site is operated by Localised Inc., as authorized by The Cosmetics Company Store, Inc.</div>
+                    <a class="style-337" aria-label="Learn More" name="Learn More" href="{{url_for('about_page')}}">
+                        <div class="style-338">Learn More</div>
+                    </a>
+                    <div class="style-339">© The Cosmetic Company Store and its licensors. All rights reserved.</div>
+                </div>
+            </div>
+            
+        </footer>
+        <script src="{{ url_for('static', filename='scripts/base.js') }}"></script>
+        <!-- footer code -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              $('.alert').alert()
+            })
+          </script>
+{</body>
+</html>}

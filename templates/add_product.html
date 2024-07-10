@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}Add Product{% endblock %}
+
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/add_product.css') }}">
+{% endblock %}
+
+
+{% block content %} 
+
+    <div class="style-2">
+            <main class="style-138">
+                <div class="style-139">
+                    <div class="style-140">
+                        <div class="style-141">
+                            
+                            <div class="style-146">
+                            </div>
+                            <div class="style-148">
+                                <div class="style-149">
+                                    <div class="style-150">
+                                        <div class="style-151">
+                                            <form class="style-152" method="POST" name="account-create-form">
+                                                {{ form.hidden_tag() }}
+                                             
+                                                
+                                                <div class="style-173">
+                                                    <div class="style-174">
+                                                        <div class="style-175">
+                                                            <label class="style-176" for="email">
+                                                                <div class="style-177">Product Name</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-178">
+                                                            <div class="style-179" dir="ltr">
+                                                                <div class="style-180">
+                                                                    
+                                                                </div>
+                                                             
+                                                                {{ form.name_product(type="text",class="style-184", placeholder="Product name") }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-185">
+                                                    <div class="style-186">
+                                                        <div class="style-187">
+                                                            <label class="style-188" for="password">
+                                                                <div class="style-189">Image URL</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-190" dir="ltr">
+                                                           
+                                                            {{ form.image_url_product(class="style-194",type="text",placeholder="Product Image URL") }}
+                                                            <div class="style-195">
+                                                                <button class="style-196" data-testid="" title="Show password" type="button">
+                                                                    
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-199">
+                                                    <div class="style-200">
+                                                        <div class="style-201">
+                                                            <label class="style-202" for="confirmPassword">
+                                                                <div class="style-203">Product Price</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-204" data-validationstatus="false" dir="ltr">
+                                                           
+                                                            {{ form.product_price(class="style-208",type="text",placeholder="Product ${{ product.price_product }}0") }}
+                                                            <div class="style-209">
+                                                                <button class="style-210" data-testid="" title="Show password" type="button">
+                                                                   
+                                                                </button>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+
+                                                <div class="style-199">
+                                                    <div class="style-200">
+                                                        <div class="style-201">
+                                                            <label class="style-202" for="confirmPassword">
+                                                                <div class="style-203">Shipping Address Free/Paid</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-204" data-validationstatus="false" dir="ltr">
+                                                           
+                                                            {{ form.shipping_address(class="style-208",type="text",placeholder="Shipping Address") }}
+                                                            <div class="style-209">
+                                                                <button class="style-210" data-testid="" title="Show password" type="button">
+                                                                   
+                                                                </button>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+
+                                                <div class="style-199">
+                                                    <div class="style-200">
+                                                        <div class="style-201">
+                                                            <label class="style-202" for="confirmPassword">
+                                                                <div class="style-203">Size Product</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-204" data-validationstatus="false" dir="ltr">
+                                                           
+                                                            {{ form.size_product(class="style-208",type="text",placeholder="Size Product") }}
+                                                            <div class="style-209">
+                                                                <button class="style-210" data-testid="" title="Show password" type="button">
+                                                                   
+                                                                </button>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+
+                                                <div class="style-199">
+                                                    <div class="style-200">
+                                                        <div class="style-201">
+                                                            <label class="style-202" for="confirmPassword">
+                                                                <div class="style-203">Description Product</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-204" data-validationstatus="false" dir="ltr">
+                                                           
+                                                            {{ form.description_product(class="style-208",type="text",placeholder="Description ¨Product") }}
+                                                            <div class="style-209">
+                                                                <button class="style-210" data-testid="" title="Show password" type="button">
+                                                                   
+                                                                </button>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+
+                                                <div class="style-199">
+                                                    <div class="style-200">
+                                                        <div class="style-201">
+                                                            <label class="style-202" for="confirmPassword">
+                                                                <div class="style-203">Category ID</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-204" data-validationstatus="false" dir="ltr">
+                                                           
+                                                            {{ form.categoryid(class="style-208",type="text",placeholder="Category ID") }}
+                                                            <div class="style-209">
+                                                                <button class="style-210" data-testid="" title="Show password" type="button">
+                                                                   
+                                                                </button>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div class="style-199">
+                                                    <div class="style-200">
+                                                        <div class="style-201">
+                                                            <label class="style-202" for="confirmPassword">
+                                                                <div class="style-203">Color Product</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="style-204" data-validationstatus="false" dir="ltr">
+                                                           
+                                                            {{ form.color_product(class="style-208",type="text",placeholder="Product Color") }}
+                                                            <div class="style-209">
+                                                                <button class="style-210" data-testid="" title="Show password" type="button">
+                                                                   
+                                                                </button>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+
+                                               
+                                                <div class="style-231">
+                             
+                                                    {{ form.Addproduct(class="style-232") }}
+                                                </div>
+                                            </form>
+                                            <div class="style-233"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+{% endblock %}

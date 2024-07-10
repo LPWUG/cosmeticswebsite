@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/shipping_bag.css') }}">
+<script src="{{ url_for('static', filename='scripts/product1.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<body class="style-0">
+    <main class="style-139">
+        <div class="style-140" data-testid="checkout">
+            <nav aria-label="Checkout" class="style-141">
+                <h1 class="style-142">
+                    <a class="style-143" aria-label="Shopping bag" name="Shopping bag" href="/en-us/checkout/basket">Shopping bag</a>
+                </h1>
+            </nav>
+            <div class="style-144">
+                <div class="style-145">
+                    
+                    <table aria-describedby="basket" class="style-163">
+                        <h2 class="TITLE">Your items</h2>
+                        <thead scope="rowgroup" class="style-164">
+                            <tr class="style-165">
+                                <th class="style-166" scope="col">Item Summary</th>
+                                <th class="style-167" scope="col">Price</th>
+                                <th class="style-168" scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody role="rowgroup" class="style-170">
+                            {% for bag_product in bag_products %}
+                            <tr class="style-171" data-testid="basket-item" role="row">
+                                <td class="style-172">
+                                    <div class="style-173"><a class="style-174" aria-label="SURF SPRAY" data-testid="minicart-item-details-image-link-0-image-link" name="SURF SPRAY" title="SURF SPRAY">
+                                            <div class="style-175">
+                                                <div class="style-176">
+                                                    <div class="style-177"><img alt="SURF SPRAY" height="750" src="{{ bag_product.image_url_product }}" width="600" class="style-178" /></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="style-179">
+                                        <div class="style-180">
+                                            
+                                            <div class="style-181">
+                                                
+                                                <a class="style-182" aria-label="SURF SPRAY" name="SURF SPRAY" href="/en-us/product/surf-spray/B1N201?sku=cs_B1N201">{{ bag_product.name_product }}</a>
+                                            </div>
+                                        </div>
+                                        <div class="style-183">
+                                        
+                                        <button aria-label="Remove SURF SPRAY from shopping bag" class="style-201" data-testid="remove-from-cart-0" name="Remove SURF SPRAY from shopping bag" style="font-weight: bold;"
+                                        ><a href="/delete_bag_product/{{ bag_product.id }}" style="text-decoration: none; color: #000;">Remove</a></a></button>
+                                        
+                                    </div>
+                                    
+                                </td>
+                                <td class="style-202">
+                                    <div class="" style="color: green; font-weight: bold;">${{ bag_product.price_product }}</div>
+                                </td>
+                                <td class="style-205" data-testid="quantitySelector">
+                                    <div class="style-206">
+                                        <div class="style-207" data-testid="quantity-selector">
+                                            <button aria-label="Reduce quantity by one" class="style-208" data-testid="decrement-btn" name="Reduce quantity by one" type="button">
+                                                <div class="style-209">
+                                                    <img src="https://i.postimg.cc/jSZTsF5r/pngegg-1.png" class="style-210">
+                                                </div>
+                                            </button>
+                                            <input aria-label="Quantity input" class="style-211" data-testid="quantity-input" lang="en" max="5" min="1" value="1" />
+                                            <button aria-label="Increase quantity by one" class="style-212" data-testid="increment-btn" name="Increase quantity by one" type="button">
+                                                <div class="style-213">
+                                                    <img src="https://i.postimg.cc/gjPQyVJD/plus-104-32.png" class="style-214">
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+                            
+                            
+                        </tbody>
+                        
+                    </table>
+
+                    <span class="style-263">Availability and pricing for items in bag are not guaranteed until checkout is complete. All sales final.</span>
+                    <span class="style-264">We aim to deliver your order promptly by processing it right away. This means that once your order is placed, we cannot make any changes, including cancellations, address updates, shipping method adjustments, or item modifications.</span>
+                    
+                    
+                </div>
+               
+            </div>
+        </div>
+    </main>
+{% block inner_content %}
+    <script src="{{ url_for('static', filename='scripts/shipping_bag.js') }}"></script>
+    
+{% endblock %}
+
+
+
+{% endblock %}

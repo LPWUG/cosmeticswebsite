@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/FAQs.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="style-0">
+        <div class="style-1">
+            <h3 class="style-2">Can I cancel my order or change it before it ships?</h3>
+            <p class="style-3">We want you to get your items as soon as possible, and so we process orders as soon as we receive them. Unfortunately, that also means we can't make any changes after your order is placed. This includes canceling your entire order (or part of it), changing the address, changing the shipping method, and adding, replacing, or removing items from your order.</p>
+        </div>
+        <div class="style-4">
+            <h3 class="style-5">Where do you ship?</h3>
+            <p class="style-6">All orders ship with UPS ground service, and therefore we can only ship to addresses within the 48 contiguous United States at this time.<br class="style-7" />
+                We regret that we are unable to ship PO Boxes, APO, FPO, DPO Military addresses at this time. We apologize for any inconvenience.</p>
+        </div>
+        <div class="style-8">
+            <h3 class="style-9">What are my shipping options?</h3>
+        </div>
+        <div class="style-10">
+            <table class="style-11">
+                <thead class="style-12">
+                    <tr class="style-13">
+                        <th class="style-14">Shipping Method</th>
+                        <th class="style-15">Shipping Charge</th>
+                        <th class="style-16">Estimated Delivery Windows</th>
+                    </tr>
+                </thead>
+                <tbody class="style-17">
+                    <tr class="style-18">
+                        <td class="style-19">Standard</td>
+                        <td class="style-20">$5 or free when you spend over $50</td>
+                        <td class="style-21">10-14 business days*</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="style-22">
+            <p class="style-23">(*) Saturdays, Sundays and holidays are not considered business days</p>
+            <p class="style-24">Please kindly note it may take up to 1-2 business days for your order to process in the warehouse. We do not currently ship to PO Boxes at this time.</p>
+        </div>
+        <div class="style-25">
+            <h3 class="style-26">What is your returns policy?</h3>
+            <p class="style-27">At The beauty haven store we stand behind the quality of our products and want every purchase to be a positive experience. We will do our best to make things right if you are not satisfied. In the case of an issue with your purchase, please <a class="style-28" href="/en-us/support/contact-us">contact us</a> within 30 days from the date of your delivery and our Customer Service Team will be happy to assist you. Please note that all items are final sale with the exception of defective merchandise.</p>
+        </div>
+        <div class="style-32">
+            <h3 class="style-33">How can I use a promo code?</h3>
+            <p class="style-34">If you have a coupon or promo code you want to use, type or copy it into the Promo Code box in your shopping bag page, and click "+". Don't worry, codes are not case-sensitive. If your promo code doesn't work, it may be because:</p>
+            <ol class="style-35">
+                <li class="style-36">
+                    <p class="style-37">Some of the promotion conditions are not met</p>
+                </li>
+                <li class="style-38">
+                    <p class="style-39">The promo code doesn't apply to the items in your bag</p>
+                </li>
+                <li class="style-40">
+                    <p class="style-41">The code expired</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}

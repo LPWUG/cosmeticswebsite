@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dashboard.css') }}">
+{% endblock %}
+
+
+{% block content %} 
+
+    <main class="container">
+        <div class="top">
+            <tr>
+                <th scope="col"><a class="button" href="{{ url_for('add_product_page') }}">Add Product</a></th>
+            </tr>
+        </div>
+        
+      
+        <div class="table-container">
+            <table aria-describedby="product">
+                {% for product in products %}
+                <tbody>
+                    <tr class="productt" data-testid="product-item" role="row">
+                        <div>
+                            <td>
+                                <img src="{{ product.image_url_product }}" alt="Image Didn't load"/>
+                                <a href="/en-us/product/surf-spray/B1N201?sku=cs_B1N201">{{ product.name_product }}</a>
+                            </td>
+                        </div>
+                        <div>
+                            <td><a class="button" href="/modify_product/{{ product.id }}">Modify Product</a></td>
+                            <td><a class="button" href="/delete_product/{{ product.id }}">Remove Product</a></td>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+            {% endfor %}
+        </div>
+        
+    </main>
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home_page.css') }}">
+{% endblock %}
+
+
+{% block content %} 
+    <div class="slider-container">
+        <div class="images" id="imageContainer">
+            <img src="https://i.postimg.cc/zXvB2d0Q/este-free-shipping-d-16647c433c.png" alt="Image 1">
+            <img src="https://i.postimg.cc/tCkcJkb9/pb-d-ca602e6e33.png" alt="Image 2">
+            <img src="https://i.postimg.cc/8Cmfg7WX/EDIT-0627-pb-d-8dd0e7b79e.png" alt="Image 3" class="Image3">
+        </div>
+        <div class="images-993" id="imageContainer993">
+            <img src="https://i.postimg.cc/qvwqCn7s/este-free-shipping-m-185a7b8b79.png" alt="Image 4">
+            <img src="https://i.postimg.cc/WzcTyb3p/EDIT-0627-pb-m-9f9a3ae854.png" alt="Image 5">
+        </div>
+        <button onclick="prevImage()" class="style-144">
+            <div class="style-145">
+                <img src="https://i.postimg.cc/zvZK31Sf/vecteezy-arrow-vector-icon-linear-style-arrow-icon-for-web-and-11133378-removebg-preview.png" class="style-146">
+            </div>
+        </button>
+        <button onclick="nextImage()" class="style-2970">
+            <div class="style-2980">
+                <img src="https://i.postimg.cc/x1THX5HL/vecteezy-arrow-vector-icon-linear-style-arrow-icon-for-web-and-11133378-removebg-preview.png" class="style-2990">
+            </div>
+        </button>
+    </div>
+    <div class="style-3020">
+        {% for category in categories[:3] %}
+        <div class="style-3030" data-testid="featured-card-1-desktop">
+            <div class="style-3040">
+                <div class="style-3050" data-testid="featured-card">
+                   
+                    <div class="style-3060">
+                        <a class="style-3070" aria-label="Summer Haircare Essentials" data-testid="text-and-image-link" name="Summer Haircare Essentials" href="{{ url_for('category_page', category_id=category.id) }}">
+                            <div class="style-3080" data-testid="text-and-image-imageWrapper">
+                                <div class="style-3090">
+                                    <div class="style-3100">
+                                        <div class="style-3110">
+                                            <img alt="Summer Haircare Essentials" height="1250" src="{{category.image_url_category}}" width="1250" class="style-312" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-3130" data-testid="text-and-image-caption">
+                                <div class="style-3140">
+                                    <div class="style-3150">
+                                        <div class="style-3160">
+                                            <div class="style-3170">
+                                                <h2 class="style-3180">
+                                                    <div class="style-3190">
+                                                        <div class="style-3200">{{category.name}}</div>
+                                                    </div>
+                                                </h2>
+                                            </div>
+                                            <div class="style-3210">
+                                                <div class="style-3220">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="style-3250">
+                                                <div class="style-3260">
+                                                    <a class="style-3270" aria-label="Shop Haircare" name="Shop Haircare" href="/en-us/haircare">
+                                                        <span class="style-3280" type="submit">
+                                                            <div class="style-329">Shop Haircare</div>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+  
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>BEST SELLERS</h1>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <button class="button-left">
+            <div class="style-805">
+                <img src="https://i.postimg.cc/ZqSGP9bP/vecteezy-arrow-vector-icon-linear-style-arrow-icon-for-web-and-11133378-removebg-preview.png" class="style-806" alt="Left Arrow">
+            </div>
+        </button>
+        <button class="button-right">
+            <div class="style-398">
+                <img src="https://i.postimg.cc/43QrWJyD/vecteezy-arrow-vector-icon-linear-style-arrow-icon-for-web-and-11133378-removebg-preview.png" class="style-399" alt="Right Arrow">
+            </div>
+        </button>
+
+        <div class="products">
+            {% for item in items[:30] %}
+                <div class="product">
+                    <a href=""><img class="heart-icon" src="https://i.postimg.cc/Sx0HWSZK/heart-3510-1.png" alt="Heart"></a>
+                    <div class="ono">
+                        <a href="{{ url_for('product_details', product_id=item.id) }}">
+                            <img src="{{item.image_url_product}}" class="Product1" alt="Product Image">
+                            <h2 style="overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                        width: 10rem;">
+                            {{ item.name_product }}</h2>
+                            <p class="description">KILLER LINER 36 HOUR WEAR</p>
+                            <p class="price">
+                                <span class="new-price">${{ item.price_product }}0</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+
+    <div class="style-807" data-testid="brand-header-view">
+        <h2 class="style-808">
+            <div class="style-809">
+                <div class="style-810">FEATURED BRANDS</div>
+            </div>
+        </h2>
+    </div>
+ 
+
+    <div class="style-929">
+        <div class="style-930" data-testid="homepage-footer-banner-view-desktop">
+            <div class="style-931">
+                <div class="style-932" data-testid="text-and-image-caption">
+                    <div class="style-933">
+                        <div class="style-934">
+                            <div class="style-935"></div>
+                        </div>
+                    </div>
+                </div>
+                <a class="style-936" data-testid="text-and-image-link"target="_blank" href="https://maps.app.goo.gl/RvevcAmyAMXPeTEk7">
+                    <div class="style-937" data-testid="text-and-image-imageWrapper">
+                        <div class="style-938">
+                            <div class="style-939">
+                                <div class="style-940">
+                                    <img alt="Beauty's Best Kept Secret" height="654" src="https://i.postimg.cc/DZLhcwLf/beuaty-haven.png" width="2000" class="style-941" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    {% block inner_content %}
+    <script src="{{ url_for('static', filename='scripts/home_page.js') }}"></script>
+    
+    {% endblock %}
+{% endblock %}

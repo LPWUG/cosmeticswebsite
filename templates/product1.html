@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name_product }}{% endblock %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/product1.css') }}">
+    <script src="{{ url_for('static', filename='scripts/product1.js') }}"></script>
+{% endblock %}
+
+
+{% block content %} 
+
+    <!-- main code -->
+    
+    {% block extra_scripts %}
+    <script src="{{ url_for('static', filename='scripts/marketpage.js') }}"></script>
+    {% endblock %}
+    <main class="style-500">
+        <div class="style-501">
+            <div class="style-502" data-testid="product-container">
+                <div class="style-503" data-testid="productMain">
+                    <div class="style-504">
+                        <div class="style-505" data-testid="carouselGallery">
+                            <div class="style-506">
+                                <div class="style-507"><button aria-label="ESTEE LAUDER ADVANCED NIGHT REPAIR" class="style-508" name="ESTEE LAUDER ADVANCED NIGHT REPAIR">
+                                    <div class="style-509">
+                                        <div class="style-510">
+                                            <div class="style-511"><img alt="ESTEE LAUDER ADVANCED NIGHT REPAIR" height="750" src="{{ product.image_url_product }}" width="600" class="style-512" /></div>
+                                        </div>
+                                    </div>
+                                </button></div>
+                                <div class="style-513">
+                                    <div class="style-514">
+                                        <div class="style-515">
+                                            <div data-index="0" class="style-516" tabindex="-1" aria-hidden="false">
+                                                <div class="style-517">
+                                                    <div class="style-518" tabindex="-1">
+                                                        <div class="style-519">
+                                                            <div dir="ltr" class="style-520">
+                                                                <div class="style-521">
+                                                                    <div class="style-522">
+                                                                        <img src="{{ product.image_url_product }}" alt="ESTEE LAUDER ADVANCED NIGHT REPAIR" class="style-523"/>
+                                                                        <div class="style-524"><img alt="" src="{{ product.image_url_product }}" class="style-525" /></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-526" data-testid="productMain-group-2">
+                            <div class="style-527" data-testid="productBrandName"><a class="style-528" href="/en-us/skincare/brands/estee-lauder">
+                                <h3 class="style-529" data-testid="brand">
+                                   
+                                </h3>
+                            </a></div>
+                            <div class="style-532" data-testid="productName">
+                                <h1 class="style-533" data-testid="product-name">
+                                    <div class="style-534">
+                                        <div class="style-535" itemprop="name">{{ product.name_product }}</div>
+                                    </div>
+                                </h1>
+                            </div>
+                            <div class="style-536"><span class="style-537" data-testid="originalPrice"><span class="style-538">Was</span><span class="style-539" data-testid="currentPrice">${{ product.price_product }}0</span></div>
+                            <div class="style-542">
+                                <afterpay-placement data-amount="64.4" data-currency="USD" data-locale="en_US" data-modal-theme="white" data-size="sm" class="style-543"></afterpay-placement>
+                            </div>
+                           
+                            <div class="style-547">
+                                <div data-testid="color-options" class="style-548">
+                                    <div class="style-549"><span class="style-550">Color:</span><span class="style-551">None</span></div>
+                                </div>
+                            </div>
+                            <div class="style-552">
+                                <div class="style-553" data-testid="size-options">
+                                    <div class="style-554">
+                                        <div class="style-555"><span class="style-556">Size:</span><span class="style-557">{{ product.size_product }}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-558" data-testid="quantitySelector">
+                                <div class="style-559"><span class="style-560">Quantity</span><span class="style-561"></span></div>
+                                <div class="style-562">
+                                    <div class="style-563" data-testid="quantity-selector">
+                                        <button aria-label="Reduce quantity by one" class="style-564" data-testid="decrement-btn" disabled="" name="Reduce quantity by one" type="button">
+                                            <div class="style-565">
+                                                <img src="https://i.postimg.cc/BvX9MLBx/pngegg-1.png" class="style-566">
+                                            </div>
+                                        </button>
+                                        <input aria-label="Quantity input" class="style-567" data-testid="quantity-input" lang="en" max="5" min="1" value="1" />
+                                        <button aria-label="Increase quantity by one" class="style-568" data-testid="increment-btn" name="Increase quantity by one" type="button">
+                                            <div class="style-569">
+                                                <img src="https://i.postimg.cc/ZnGQWGyB/plus-104-32.png" class="style-570">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-571" data-testid="addToCart">
+                                <div class="style-572">
+                                    <div class="style-574">
+                                        <form class="style-152" method="POST" action="{{ url_for('product_details', product_id=product.id) }}">
+                                            {{ form.hidden_tag() }}
+                                            {{ form.name_product(class="style-208", type="hidden", placeholder="Product Name", value=product.name_product) }}
+                                            {{ form.product_price(class="style-208", type="hidden", placeholder="Product Price", value=product.price_product) }}
+                                            {{ form.image_url_product(class="style-208", type="hidden", placeholder="Image URL", value=product.image_url_product) }}
+                                            {{ form.submit(class="style-573") }}
+                                        </form>
+                                        <button aria-label="Favorites" aria-pressed="false" class="style-575" name="Favorites" onclick="toggleImage()">
+                                            <div class="style-576">
+                                                <div class="style-577">
+                                                    <div class="style-578">
+                                                        <div class="style-579">
+                                                            <img id="heart-image" src="https://i.postimg.cc/Sx0HWSZK/heart-3510-1.png" class="style-580">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-581">
+                                <span class="style-582">
+                                    <div class="style-583">
+                                        <div class="style-584">
+                                            <img src="https://i.postimg.cc/X7jWYgrN/image-15-removebg-preview.png" class="style-585">
+                                        </div>
+                                    </div>
+                                    <div class="style-586">{{ product.shipping_address_product }}</div>
+                                </span>
+                            </div>
+                            <div class="style-587" data-testid="productDescription">
+                                <div data-testid="productDescription" class="style-588">
+                                    <div class="style-589">
+                                        <div class="style-590">
+                                            <h3 class="style-591">DESCRIPTION</h3>
+                                            {{ product.description_product }}
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="style-603">
+                    <div class="style-604" data-testid="relatedItems">
+                        <div class="style-605">
+                            <h2 class="style-606">
+                                <div class="style-607">
+                                    <div class="style-608">You may also like...</div>
+                                </div>
+                            </h2>
+                        </div>
+                        <div class="style-609">
+                            <div class="style-610">
+                                <div class="style-611">
+                                    <div class="style-612">
+                                        <div class="style-613">
+                                            <div data-testid="skeleton-card-0" class="style-614">
+                                                <div class="style-615">
+                                                    <div class="style-616">
+                                                        <div class="style-617">
+                                                            <div class="style-618">
+                                                                <div class="style-619"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-620">
+                                                    <div class="style-621"></div>
+                                                    <div class="style-622"></div>
+                                                    <div class="style-623"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-1" class="style-624">
+                                                <div class="style-625">
+                                                    <div class="style-626">
+                                                        <div class="style-627">
+                                                            <div class="style-628">
+                                                                <div class="style-629"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-630">
+                                                    <div class="style-631"></div>
+                                                    <div class="style-632"></div>
+                                                    <div class="style-633"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-2" class="style-634">
+                                                <div class="style-635">
+                                                    <div class="style-636">
+                                                        <div class="style-637">
+                                                            <div class="style-638">
+                                                                <div class="style-639"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-640">
+                                                    <div class="style-641"></div>
+                                                    <div class="style-642"></div>
+                                                    <div class="style-643"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-3" class="style-644">
+                                                <div class="style-645">
+                                                    <div class="style-646">
+                                                        <div class="style-647">
+                                                            <div class="style-648">
+                                                                <div class="style-649"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-650">
+                                                    <div class="style-651"></div>
+                                                    <div class="style-652"></div>
+                                                    <div class="style-653"></div>
+                                                </div>
+                                            </div>
+                                            <div data-testid="skeleton-card-4" class="style-654">
+                                                <div class="style-655">
+                                                    <div class="style-656">
+                                                        <div class="style-657">
+                                                            <div class="style-658">
+                                                                <div class="style-659"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="style-660">
+                                                    <div class="style-661"></div>
+                                                    <div class="style-662"></div>
+                                                    <div class="style-663"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- main code -->
+{% endblock %}

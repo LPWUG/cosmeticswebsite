@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/modify_product.css') }}">
+{% endblock %}
+
+
+{% block content %} 
+<div class="container">
+    <form action="/update_product/{{ product.id }}" method="post">    
+        <input class="input" type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        
+        <label for="name_product">Name:</label>
+        <input type="text" class="input" id="name_product" name="name_product" value="{{ product.name_product }}" required>
+        
+        <label for="image_url_product">Image URL:</label>
+        <input class="input" type="text" id="image_url_product" name="image_url_product" value="{{ product.image_url_product }}">
+        
+        <label for="price_product">Price:</label>
+        <input class="input" type="number" id="price_product" name="price_product" value="{{ product.price_product }}" required>
+        
+        <label for="shipping_address_product">Shipping Address:</label>
+        <input class="input" type="text" id="shipping_address_product" name="shipping_address_product" value="{{ product.shipping_address_product }}" required>
+        
+        <label for="size_product">Size:</label>
+        <input class="input" type="text" id="size_product" name="size_product" value="{{ product.size_product }}">
+        
+        <label for="color_product">Color:</label>
+        <input class="input" type="text" id="color_product" name="color_product" value="{{ product.color_product }}">
+        
+        <label for="description_product">Description:</label>
+        <textarea class="input" id="description_product" name="description_product" rows="4">{{ product.description_product }}</textarea>
+        
+        <label for="category_id">Category:</label>
+        <select class="input" id="category_id" name="category_id" required>
+            {% for category in categories %}
+                <option value="{{ category.id }}" {% if category.id == product.category_id %} selected {% endif %}>{{ category.name }}</option>
+            {% endfor %}
+        </select>
+        
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

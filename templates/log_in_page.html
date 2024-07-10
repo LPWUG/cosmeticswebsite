@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/login_in_page.css') }}">
+{% endblock %}
+
+
+{% block content %} 
+
+<body>
+    <main class="style-2000">
+    <div class="style-2001">
+        <div class="style-2002">
+            <div class="style-2003">
+                <div class="style-2004">
+                    <h1 class="style-2005">
+                        <div class="style-2006">
+                            <div class="style-2007">Sign In</div>
+                        </div>
+                    </h1>
+                </div>
+                <div class="style-2008">
+                    <div class="style-2009">
+                        <form class="style-2010" method="POST" name="account-sign-in-form">
+                            {{ form.hidden_tag() }}
+                            <div class="style-2011">
+                                <div class="style-2012">
+                                    <div class="style-2013">
+                                        <label class="style-2014" for="phoneOrEmail">
+                                            <div class="style-2015">Email</div>
+                                        </label>
+                                    </div>
+                                    <div class="style-2016">
+                                        <div class="style-2017" dir="ltr">
+                                            <div class="style-2018">
+                                                <div class="style-2019">
+                                                    <div class="style-2020">
+                                                        <img src="https://i.postimg.cc/D0pWFLvF/Adobe-Stock-596501247-Preview-removebg-preview.png" class="style-2021">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            {{ form.username(class="style-2022",type="text",placeholder="username") }}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-2023">
+                                <div class="style-2024">
+                                    <div class="style-2025">
+                                        <label class="style-2026" for="password">
+                                            <div class="style-2027">Password</div>
+                                        </label>
+                                    </div>
+                                    <div class="style-2028" dir="ltr">
+                                        <div class="style-2029">
+                                            <div class="style-2030">
+                                                <img src="https://i.postimg.cc/LXTYCGGJ/image-16.png" class="style-2031">
+                                            </div>
+                                        </div>
+                                        {{ form.password(class="style-2032",type="password",placeholder="Password") }}
+                                        <div class="style-2033">
+                                            <button class="style-2034" data-testid="" title="Show password" type="button">
+                                                <div class="style-2035">
+                                                    <img src="https://i.postimg.cc/wxNTjCwL/image-17.png" class="style-2036">
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="style-2037"><a class="style-2038" data-testid="forgot-password-link" href="/en-us/account/forgot-password">Forgot password</a></div>
+                            <div class="style-2039">{{ form.submit(class="style-2040") }}</div>
+                        </form>
+                        <div class="style-2041"></div>
+                    </div>
+                </div>
+                <div class="style-2042">
+                    <div class="style-2043">Don’t have an account with The beauty haven store?</div>
+                </div>
+                <div class="style-2044"><a class="style-2045" href="{{ url_for('register_page') }}"><span class="style-2046" data-testid="create-account-link" type="submit">Create an account</span></a></div>
+            </div>
+        </div>
+    </div>
+</main>
+{% block inner_content %}
+<script src="{{ url_for('static', filename='scripts/login_page.js') }}"></script>
+{% endblock %}
+{% endblock %}

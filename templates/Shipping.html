@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/Shipping.css') }}">
+{% endblock %}
+{% block content %}
+        
+    <div class="style-0">
+        <div class="style-1">
+            <h3 class="style-2">What are my shipping options?</h3>
+        </div>
+        <div class="style-3">
+            <table class="style-4">
+                <thead class="style-5">
+                    <tr class="style-6">
+                        <th class="style-7">Shipping Method</th>
+                        <th class="style-8">Shipping Charge</th>
+                        <th class="style-9">Estimated Delivery Windows</th>
+                    </tr>
+                </thead>
+                <tbody class="style-10">
+                    <tr class="style-11">
+                        <td class="style-12">Standard</td>
+                        <td class="style-13">$5 or free when you spend over $50</td>
+                        <td class="style-14">10-14 business days*</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="style-15">
+            <p class="style-16">(*) Saturdays, Sundays and holidays are not considered business days</p>
+            <p class="style-17">Please kindly note it may take up to 1-2 business days for your order to process in the warehouse. We do not currently ship to PO Boxes at this time.</p>
+        </div>
+        <div class="style-18">
+            <h3 class="style-19">Where do you ship?</h3>
+            <p class="style-20">All orders ship with UPS ground service, and therefore we can only ship to addresses within the 48 contiguous United States at this time.<br class="style-21" />
+                We regret that we are unable to ship PO Boxes, APO, FPO, DPO Military addresses at this time. We apologize for any inconvenience.</p>
+        </div>
+        <div class="style-22">
+            <h3 class="style-23">How can I check the status of my order?</h3>
+            <p class="style-24">Please kindly note it may take up to 3 working days for your order to process in the warehouse. You will receive an email with your tracking number, once the items are processed and getting ready to leave the warehouse. Tracking details could take up to 24 hours to update after you receive the tracking link from us.</p>
+            <p class="style-25">You can also log into your The beauty haven store account to track your order at any time. If you don't have an account yet, use your order number to track your order through <a class="style-26" href="/en-us/orders/order-status">this link</a>.</p>
+        </div>
+        <div class="style-27">
+            <h3 class="style-28">Why are items in my order shipped in separate packages?</h3>
+            <p class="style-29">Usually, we try to have all your items shipped together. Despite that, we may choose to split your order to ensure you get it sooner. If that happens, you'll get a separate tracking number for every package. Don't worry - even if we send multiple packages, we'll never charge you more than the shipping cost you saw during checkout.</p>
+        </div>
+    </div>
+{% endblock %}

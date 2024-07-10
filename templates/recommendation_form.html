@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Recommended Product{% endblock %}
+
+
+{% block extra_head %}
+<style>
+
+    .h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 4rem auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .label {
+        font-weight: bold;
+    }
+    .select, .button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .button {
+        background-color: darkblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: darkblue;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %} 
+
+    <div class="container">
+        <h1 class="h1">Skin Type Product Recommender</h1>
+        <form action="/remmended" method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <label class="label" for="skin_type">Select your skin type:</label>
+            <select class="select" id="skin_type" name="skin_type">
+                {% for skin_type in skin_types %}
+                <option value="{{ skin_type }}">{{ skin_type }}</option>
+                {% endfor %}
+            </select>
+            <button class="button" type="submit">Recommend Products</button>
+        </form>
+    </div>
+{% endblock %}

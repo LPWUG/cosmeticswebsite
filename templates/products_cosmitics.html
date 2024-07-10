@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block title %}Cosmitics products{% endblock %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/market.css') }}">
+{% endblock %}
+
+
+{% block content %} 
+    <!-- main code -->
+
+    <main>
+        <div class="style-505">
+            <div class="style-hair">
+                <h1 class="style-hair-title">Haircare</h1>
+            </div>
+            <div class="button-container" id="button-container">
+                <button id="browseByButton">FILTERS & BROWSE</button>
+                <button id="filterSortButton">SORT</button>
+            </div>
+    
+            <div class="style-506">
+                <div class="style-507 sidebar-popup" id="sidebarPopup">
+                    <!-- Browse By: -->
+                    <div class="style-508" data-testid="sideNavigation">
+                        <div class="style-509" data-testid="title">
+                            <h3 class="style-510">
+                                <div class="style-511">
+                                    <div class="style-512">Browse By:</div>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="style-513" data-testid="sideNavigation-sideNavigation-2">
+                            <div class="style-514">
+                                <div class="style-515">
+                                    <div class="style-516">
+                                        <button class="style-517" value="Haircare">
+                                            <div class="style-518">Haircare</div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="style-519">
+                                    <div class="style-520">
+                                        <button class="style-521" value="Gift Sets">
+                                            <div class="style-522">Gift Sets</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Browse By: -->
+                     <!-- filter By: -->
+                    <div class="style-523" data-testid="sidebarFilters">
+                        <!-- filtre By: -->
+                        <div class="style-524" data-testid="title">
+                            <h3 class="style-525">
+                                <div class="style-526">
+                                    <div class="style-527">Filter By:</div>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="style-528">
+                            <div class="style-529">
+                                <div class="style-530">
+                                    <button aria-label="brand" aria-pressed="true" class="style-531" name="brand" type="button"  id="brand-button">
+                                        <div class="style-532">
+                                            <h4 class="style-533">
+                                                <div class="style-534">
+                                                    <div class="style-535">Brands</div>
+                                                </div>
+                                            </h4>
+                                        </div>
+                                        <div class="style-536">
+                                            <img src="https://i.postimg.cc/BvX9MLBx/pngegg-1.png" class="style-537" id="brand-image">
+                                        </div>
+                                    </button>
+                                    <div class="style-538" id="buttons-container">
+                                        <div class="style-539">
+                                            <div class="style-540">
+                                                <div class="style-541">
+                                                    <div class="style-542">
+                                                        <button aria-label="AVEDA" aria-pressed="false" class="style-543" name="AVEDA">AVEDA</button>
+                                                    </div>
+                                                    <div class="style-544">
+                                                        <button aria-label="BUMBLE &amp; BUMBLE" aria-pressed="false" class="style-545" name="BUMBLE &amp; BUMBLE">BUMBLE &amp; BUMBLE</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="style-546">
+                                <div class="style-547">
+                                    <button aria-label="priceRange" aria-pressed="true" class="style-548" name="priceRange" type="button"  id="price-button">
+                                        <div class="style-549">
+                                            <h4 class="style-550">
+                                                <div class="style-551">
+                                                    <div class="style-552">Price</div>
+                                                </div>
+                                            </h4>
+                                        </div>
+                                        <div class="style-553">
+                                            <img src="https://i.postimg.cc/BvX9MLBx/pngegg-1.png" class="style-554"  id="price-image">
+                                        </div>
+                                    </button>
+                                    <div class="style-555" id="price-form-container">
+                                        <div class="style-556">
+                                            <div class="style-557">
+                                                <form class="style-558" novalidate="">
+                                                    <div class="style-559">
+                                                        <div class="style-560">
+                                                            <div class="style-561">
+                                                                <label class="style-562">
+                                                                    <div class="style-563">Min</div>
+                                                                </label>
+                                                            </div>
+                                                            <div class="style-564" dir="ltr">
+                                                                <div class="style-565">$</div><input min="0" placeholder="6.60" step="1" aria-invalid="false" type="number" value="" class="style-566" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="style-567">-</div>
+                                                        <div class="style-568">
+                                                            <div class="style-569">
+                                                                <label class="style-570">
+                                                                    <div class="style-571">Max</div>
+                                                                </label>
+                                                            </div>
+                                                            <div class="style-572" dir="ltr">
+                                                                <div class="style-573">$</div><input min="0" placeholder="105.60" step="1" aria-invalid="false" type="number" value="" class="style-574" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="style-575" type="submit">Update price</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- filtre By: -->
+                    </div>
+                </div>
+                <div class="style-576">
+                    <div class="style-hair-second">
+                        <h1 class="style-hair-title2">Haircare</h1>
+                    </div>
+                    <div class="style-508 filter-popup" id="filterPopup">
+                        <div class="style-581">
+                            <div class="style-582">
+                                <!-- sort By: -->
+                                <div class="style-583">
+                                    <div class="style-584">
+                                        <button aria-label="sortBy" aria-pressed="false" class="style-585" name="sortBy" type="button">
+                                            <div class="style-586">
+                                                <h4 class="style-587">
+                                                    <div class="style-588">
+                                                        <div class="style-589">Sort By</div>
+                                                    </div>
+                                                </h4>
+                                            </div>
+                                            <div class="style-590">
+                                                <img src="https://i.postimg.cc/WbYwvdPW/Caret-Symbol-PNG-Image.png" class="style-591">
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-options" id="dropdown-options">
+                                            <div>Best Sellers</div>
+                                            <div>Newest</div>
+                                            <div>Price (low - high)</div>
+                                            <div>Price (high - low)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sort By: --> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="style-603" data-testid="listingProductGrid">
+    
+                        <div class="style-604">
+
+                            <div class="style-605">
+                                {% for product in products %}
+
+                                <div class="style-606">
+
+                                    <div class="style-607">
+                                        <div data-testid="product-card-1" class="style-608">
+
+                                            <div class="style-609"><a class="style-610" aria-label="Bumble and Bumble PRÊT-À-POWDER TRÈS INVISIBLE (NOURISHING) DRY SHAMPOO" data-testid="product-card-1-image-link" name="Bumble and Bumble PRÊT-À-POWDER TRÈS INVISIBLE (NOURISHING) DRY SHAMPOO" title="Bumble and Bumble PRÊT-À-POWDER TRÈS INVISIBLE (NOURISHING) DRY SHAMPOO" href="">
+
+                                                <div class="style-611">
+
+                                                    <div class="style-612" style="overflow: hidden;">
+                                                        <div class="style-613">
+                                                            <img alt="" height="750" src="" width="600" class="style-614" style="max-width: 100%; height: auto;" />
+                                                        </div>
+                                                    </div>  
+                                                </div>
+                                            </a>
+                                            <div class="style-615">
+                                                <button aria-label="Favorites" aria-pressed="false" class="style-616" name="Favorites" id="favorites-button">
+
+                                                    <div class="style-617">
+                                                        <div class="style-618">
+
+                                                            <div class="style-619">
+                                                                <div class="style-620">
+                                                                    <img src="https://i.postimg.cc/Sx0HWSZK/heart-3510-1.png" class="style-621" id="heart-image"></img>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="style-622">
+                                            <div class="style-623">
+                                                <h4 class="style-624">
+                                                    <div class="style-625">
+                                                        
+                                                    </div>
+                                                    <div class="style-626" data-testid="product-card-title">{{ product.name }}</div>
+                                                </h4>
+                                            </div>
+                                               
+                                            
+                                            <div class="style-627">
+                                                <div class="style-628"><span class="style-629" data-testid="originalPrice" style="float: right;">{{ products.brand }}</span></div>
+                                            </div>
+                                           
+                                                
+                                        </div>
+                                        
+
+
+
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="style-637">
+                        <div class="style-638">
+                            <div class="style-639"></div>
+                            <div class="style-640">
+                                <div class="style-641">1 - 74 of 74 Results</div>
+                                <div class="style-642" data-testid="paginator">
+                                    <div class="style-643" data-testid="paginator">
+                                        <button aria-label="Go to the previous page" class="style-644" data-testid="previous-btn" disabled="" name="Go to the previous page">
+                                            <div class="style-645">
+                                                <img src="https://i.postimg.cc/76DyKHpD/angle-left-svgrepo-com-1.png" class="style-646"></img>
+                                            </div>
+                                        </button>
+                                        <span class="style-647">1 of 1</span>
+                                        <button aria-label="Go to the next page" class="style-648" data-testid="next-btn" disabled="" name="Go to the next page">
+                                            <div class="style-649">
+                                                <img src="https://i.postimg.cc/qMgHbZZt/angle-left-svgrepo-com.png" class="style-650"></img>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- main code -->
+
+{% endblock %}
